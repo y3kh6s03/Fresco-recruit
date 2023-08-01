@@ -1,0 +1,27 @@
+@use 'src/app/styles/_mq.scss' as *;
+
+
+.pc__header {
+    opacity: 0;
+
+    @include mq(lg) {
+        opacity: 1;
+    }
+
+    & .pc__nav {
+        &__title {
+            & img {}
+
+            & h2 {}
+        }
+        &__ul {}
+
+        &__li {
+            & a {
+            }
+
+            & span {
+            }
+        }
+    }
+}
