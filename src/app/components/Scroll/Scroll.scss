@@ -1,0 +1,56 @@
+@use "/src/app/styles/_common.scss" as *;
+
+
+.scroll {
+    writing-mode: vertical-rl;
+    position: relative;
+    height: 240px;
+
+    & span{
+        @extend .font-md;
+        color: $cOrange;
+
+        &::before{
+            content: "";
+            width: 1px;
+            height: 140px;
+            background-color: $cOrange;
+            opacity: .4;
+            position: absolute;
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, 0);
+        }
+        &::after{
+            content: "";
+            width: 1px;
+            height: 140px;
+            background-color: $cOrange;
+            opacity: 1;
+            position: absolute;
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, 0) scaleY(0);
+            animation: scrollAnime 1s infinite;
+        }
+
+        @keyframes scrollAnime{
+            0%{
+                transform: translate(-50%, 0) scaleY(0);
+                transform-origin: top;
+            }
+            50%{
+                transform: translate(-50%, 0) scaleY(1);
+                transform-origin: top;
+            }
+            51%{
+                transform: translate(-50%, 0) scaleY(1);
+                transform-origin: bottom;
+            }
+            100%{
+                transform: translate(-50%, 0) scaleY(0);
+                transform-origin: bottom;
+            }
+        }
+    }
+}

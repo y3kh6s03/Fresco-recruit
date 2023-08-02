@@ -1,0 +1,99 @@
+@use "src/app/styles/_common.scss" as *;
+
+.hero {
+    width: 100vw;
+    z-index: -1;
+
+    &__title {
+        @extend .font-xl;
+        margin: 100px 0;
+        position: relative;
+
+        &::before{
+            content: "Meal for Smail";
+            @extend .font-xxl;
+            opacity: .05;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(20%, -50%);
+            z-index: -1;
+        }
+    }
+
+    &__inner{
+        width: 100vw;
+        height: 600px;
+        margin: 0 calc(50% - 50vw);
+        border-radius: 0 0 0 200px;
+        position: relative;
+
+
+    }
+
+    &__image {
+        width: 80%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0 0 0 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &__img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            z-index: -1;
+            animation: heroSlider 24s linear infinite;
+
+            &:nth-child(1) {
+                background-image: url(/images/home/student_hero.jpg);
+                animation-delay: -2s;
+            }
+
+            &:nth-child(2) {
+                background-image: url(/images/home/work_bg.jpg);
+                animation-delay: 6s;
+            }
+
+            &:nth-child(3) {
+                background-image: url(/images/home/luisa-brimble-vIm26fn_QKg-unsplash.jpg);
+                animation-delay: 14s;
+            }
+        }
+
+
+
+        @keyframes heroSlider {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+            4.16% {
+                opacity: 1;
+            }
+            33.33% {
+                opacity: 1;
+            }
+            41.66% {
+                opacity: 0;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+    & .scroll {
+        position: absolute;
+        top: 0;
+        left: 5%;
+    }
+}
