@@ -1,16 +1,26 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import "src/app/components/Navbar/Navbar.scss"
+import { useState } from "react"
 
 
 
 export const NavBar = () => {
+
+    const [menuClass, setMenuClass] = useState(false);
+
+    const onMenuOpen = () => {
+        setMenuClass((prev) => !prev);
+    }
+
     return (
         <>
             <div className="pc__header">
                 <nav className="pc__nav">
                     <div className="pc__nav__title">
-                        <Image src="/images/fresco_logo.png" width='150' height='25'></Image>
+                        <Image src="/images/fresco_logo.png" width='250' height='35' alt="header-logo"></Image>
                         <h2>Recruit Site</h2>
                     </div>
                     <ul className="pc__nav__ul">
@@ -48,19 +58,25 @@ export const NavBar = () => {
                 </nav >
             </div>
             <div className="mobile__header">
-                <nav className="mobile__nav">
+                <nav className={`mobile__nav ${menuClass ? 'mobile__nav__show' : ''}`}>
                     <div className="mobile__nav__title">
-                        <Image src="/images/fresco_logo.png" width='150' height='25'></Image>
-                        <h2>Recruit Site</h2>
+                        <Image src="/images/fresco_logo.png" width='250' height='35' alt="mobile-logo"></Image>
+                        <h2>2024 Recruit Site</h2>
                     </div>
 
-                    <div className="mobile__icon">
+                    <div className="mobile__icon" onClick={onMenuOpen}>
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
 
-                    <ul className="mobile__nav__ul">
+                    <ul className="mobile__nav__ul" onClick={onMenuOpen}>
+                        <li className="mobile__nav__li">
+                            <Link href='#'>
+                                Home<br />
+                                <span>トップ</span>
+                            </Link>
+                        </li>
                         <li className="mobile__nav__li">
                             <Link href='#'>
                                 About<br />

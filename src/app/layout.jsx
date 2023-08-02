@@ -11,8 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="js">
       <body>
-        <NavBar />
-        {children}
+        <div className="wrapper">
+          <NavBar />
+          {children}
+        </div>
       </body>
     </html>
   )

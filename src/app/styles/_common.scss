@@ -1,0 +1,367 @@
+@use './mq' as *;
+
+$cBlack: rgb(86, 85, 85);
+$cGreen: rgb(1, 146, 5);
+$cOrange: rgb(209, 139, 9);
+$cBcc: rgb(255, 245, 226);
+
+* {
+    @extend .font-sm;
+    color: $cBlack;
+    // outline: solid .1px;
+}
+
+
+body {
+    height: 100%;
+
+}
+
+body:after {
+    /*擬似要素をつくる*/
+    z-index: -10;
+    position: fixed;
+    /*固定配置*/
+    top: 0;
+    left: 0;
+    /*左上に固定*/
+    width: 100%;
+    height: 100%;
+    /*画面全体を覆う*/
+    content: "";
+    background: rgb(255, 245, 226);
+    background: linear-gradient(326deg, rgba(255, 245, 226, 1) 33%, rgba(255, 255, 255, 1) 76%, rgba(255, 255, 255, 1) 100%);
+}
+
+a {
+    text-decoration: none;
+    color: $cBlack;
+    // mix-blend-mode: difference;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+
+
+/**********************************
+container
+**********************************/
+
+.container {
+    width: 95vw;
+    height: 100%;
+    position: relative;
+    padding-left: 5%;
+    margin: 0 auto;
+
+    @include mq(lg) {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+.content-container {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    padding: 0 5%;
+    margin: 0 auto 80px;
+
+    @include mq(md) {
+        margin: 0 auto 100px;
+    }
+
+    @include mq(lg) {
+        max-width: 1920px;
+        margin: 0 auto 100px;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(lg) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/**********************************
+margin
+**********************************/
+.mb-xs {
+    margin-bottom: 20px;
+}
+
+.mb-sm {
+    margin-bottom: 40px;
+}
+
+.mb-md {
+    margin-bottom: 60px;
+}
+
+.mb-lg {
+    margin-bottom: 100px;
+}
+
+.mb-xl {
+    margin-bottom: 200px;
+}
+
+
+
+
+/**********************************
+font-size
+**********************************/
+.font-xs {
+    font-size: 12px;
+    margin: 0;
+
+    @include mq('lg') {
+        font-size: 14px;
+    }
+}
+
+
+.font-sm {
+    font-size: 14px;
+    margin: 0;
+
+    @include mq('lg') {
+        font-size: 16px;
+    }
+}
+
+
+.font-md {
+    font-size: 20px;
+    margin: 0;
+
+    @include mq('lg') {
+        font-size: 26px;
+    }
+}
+
+
+.font-lg {
+    font-size: 30px;
+    margin: 0;
+
+    @include mq('md') {
+        font-size: 48px;
+    }
+
+    @include mq('lg') {
+        font-size: 80px;
+    }
+}
+
+
+.font-xl {
+    font-size: 42px;
+    margin: 0;
+
+    @include mq(md) {
+        font-size: 70px;
+    }
+
+    @include mq('lg') {
+        font-size: 112px;
+    }
+}
+
+
+.font-xxl {
+    font-size: 96px;
+    line-height: 1;
+    margin: 0;
+
+    @include mq(sm) {
+        font-size: 112px;
+    }
+
+    @include mq(md) {
+        font-size: 165px;
+    }
+
+    @include mq(lg) {
+        font-size: 200px;
+    }
+
+    @include mq(xl) {
+        font-size: 300px;
+    }
+}
+
+
+
+/**********************************
+animation
+**********************************/
+@mixin animation ($name,
+    $duration: 2.5s,
+    $timing-function: ease,
+    $delay: 0s,
+    $iteration-conut: 1,
+    $direction: normal,
+    $fill-mode: normal) {
+    animation: {
+        name: $name;
+        duration: $duration;
+        timing-function: $timing-function;
+        delay: $delay;
+        iteration-count: $iteration-conut;
+        direction: $direction;
+        fill-mode: $fill-mode
+    }
+}
+
+
+/**********************************
+loaded-animation
+**********************************/
+
+
+.loaded {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9934567577030813) 0%, rgba(255, 232, 216, 1) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    &__inner {
+        width: 90%;
+        height: 10%;
+        text-align: center;
+        position: relative;
+
+        @include mq(md) {
+            width: 50%;
+        }
+
+        @include mq(lg) {
+            width: 35%;
+        }
+
+
+        &__title {
+            color: rgb(184, 184, 184);
+            font-size: 30px;
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            opacity: 0;
+            transition: none;
+        }
+
+        &__subtitle,
+        &__subtitle2 {
+            color: rgb(184, 184, 184);
+            font-size: 30px;
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        &__mask {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+    }
+}
+
+/**********************************
+scrolldown
+**********************************/
+
+
+.scrolldown1 {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%);
+
+    @include mq(lg) {
+        bottom: 10%;
+    }
+
+    &>span {
+        position: absolute;
+        left: -30px;
+        top: -50px;
+        transform: rotate(-90deg);
+        color: #eee;
+        @extend .font-md;
+        letter-spacing: 0.05em;
+
+        @include mq(lg) {
+            top: -75px;
+            left: -50px;
+        }
+    }
+}
+
+
+
+/* 線の描写 */
+.scrolldown1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 80px;
+    background: #eee;
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    30% {
+        height: 80px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0px;
+        top: 160px;
+        opacity: 0;
+    }
+}
