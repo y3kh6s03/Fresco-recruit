@@ -1,5 +1,23 @@
 import { NavBar } from './components/Navbar/NavBar'
 import 'src/app/styles/globals.scss'
+import { Noto_Sans, Noto_Sans_JP} from 'next/font/google'
+
+
+
+const notojp = Noto_Sans_JP({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-notojp",
+  display: "swap",
+});
+
+const noto = Noto_Sans({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-noto",
+  display: "swap",
+});
+
 
 
 export const metadata = {
@@ -9,7 +27,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="js">
+    <html lang="ja" className={`${noto.variable} ${notojp.variable}`}>
       <body>
         <div className="wrapper">
           <NavBar />

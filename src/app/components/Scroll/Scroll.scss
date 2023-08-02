@@ -1,10 +1,15 @@
 @use "/src/app/styles/_common.scss" as *;
+@use "/src/app/styles/_mq.scss" as *;
 
 
 .scroll {
     writing-mode: vertical-rl;
     position: relative;
     height: 240px;
+
+    @include mq(lg){
+        height: 270px;
+    }
 
     & span{
         @extend .font-md;
