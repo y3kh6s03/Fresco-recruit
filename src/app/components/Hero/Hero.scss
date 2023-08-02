@@ -1,4 +1,5 @@
 @use "src/app/styles/_common.scss" as *;
+@use "src/app/styles/_mq.scss" as *;
 
 .hero {
     width: 100vw;
@@ -9,36 +10,61 @@
         margin: 100px 0;
         position: relative;
 
+        @include mq(xl){
+            margin: 150px 0;
+        }
+
         &::before{
-            content: "Meal for Smail";
+            content: "MEAL FOR SMILE";
             @extend .font-xxl;
             opacity: .05;
+            line-height: 1;
             position: absolute;
             top: 50%;
             left: 0;
-            transform: translate(20%, -50%);
+            transform: translate(10%, -50%);
             z-index: -1;
+
+            @include mq(md){
+                top: 50%;
+            }
         }
     }
 
     &__inner{
         width: 100vw;
-        height: 600px;
+        height: 400px;
         margin: 0 calc(50% - 50vw);
-        border-radius: 0 0 0 200px;
         position: relative;
 
+        @include mq(md){
+            height: 650px;
+        }
 
+        @include mq(lg){
+            height: 850px;
+        }
     }
 
     &__image {
-        width: 80%;
+        width: 85%;
         height: 100%;
         overflow: hidden;
         border-radius: 0 0 0 200px;
         position: absolute;
         top: 0;
         right: 0;
+
+        @include mq(md){
+            border-radius: 0 0 0 400px;
+        }
+        @include mq(lg){
+            border-radius: 0 0 0 500px;
+        }
+        @include mq(xl){
+            border-radius: 0 0 0 600px;
+            width: 90%;
+        }
 
         &__img {
             display: inline-block;
