@@ -3,6 +3,7 @@
 
 
 .message {
+@extend .mb-lg;
 
     & .section__title {
         @extend .font-lg;
