@@ -1,0 +1,56 @@
+@use "src/app/styles/_mq.scss" as *;
+@use "src/app/styles/_common.scss" as *;
+
+
+.message {
+
+    & .section__title {
+        @extend .font-lg;
+        @extend .mb-sm;
+        line-height: 1.2;
+
+        & span {
+            @extend .font-sm;
+            display: block;
+        }
+    }
+
+    &__inner {
+        max-width: 650px;
+
+        @include mq(lg) {
+            max-width: none;
+            display: flex;
+            gap: 50px;
+        }
+
+        &__title {
+            width: 100%;
+            @extend .font-lg;
+            line-height: 1.1;
+            margin: 0 0 20px;
+
+            @include mq(lg) {
+                flex: 45;
+                line-height: 1;
+            }
+
+            & span {
+                @extend .font-md;
+                display: block;
+                line-height: 1.5;
+
+                @include mq(lg) {
+                    flex: 45;
+                    line-height: 2;
+                }
+            }
+        }
+
+        &__content {
+            @extend .font-md;
+            margin: 0;
+            flex: 45;
+        }
+    }
+}
