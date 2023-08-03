@@ -21,7 +21,7 @@ export const NavBar = () => {
                 <nav className="pc__nav">
                     <div className="pc__nav__title">
                         <Image src="/images/fresco_logo.png" width='250' height='35' alt="header-logo"></Image>
-                        <h2>Recruit Site</h2>
+                        <h2>2024 Recruit Site</h2>
                     </div>
                     <ul className="pc__nav__ul">
                         <li className="pc__nav__li">
