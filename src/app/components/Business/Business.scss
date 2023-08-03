@@ -74,8 +74,12 @@
 
         &__content {
             @extend .font-md;
-            width: 70%;
+            width: 100%;
             mix-blend-mode: difference;
+        }
+
+        & .button__container{
+            bottom: 10px;
         }
     }
 

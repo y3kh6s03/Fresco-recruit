@@ -1,5 +1,7 @@
+import { Button } from "@/app/components/Button/Button";
 import Image from "next/image";
 import "src/app/components/Business/Business.scss";
+
 
 export const Business = () => {
     return (
@@ -9,6 +11,7 @@ export const Business = () => {
                 <div className="business__inner__content">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime architecto sequi quia autem! Nobis blanditiis vero quo voluptatem assumenda ex.
                 </div>
+                <Button></Button>
             </div>
             <div className="business__img__container">
                 <Image src="/images/home/mailchimp-Vc2dD4l57og-unsplash.jpg" fill alt="business-image"></Image>
