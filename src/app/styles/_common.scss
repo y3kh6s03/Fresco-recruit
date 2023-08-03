@@ -59,10 +59,8 @@ container
 
 .container {
     width: 100vw;
-    height: 100%;
     position: relative;
     padding: 0 5%;
-    margin: 0 auto;
 
     @include mq(lg) {
         max-width: 1920px;
@@ -114,12 +112,28 @@ margin
 
 .mb-lg {
     margin-bottom: 100px;
+    @include mq(sm){
+        margin-bottom: 130px;
+    }
+    @include mq(md){
+        margin-bottom: 150px;
+    }
+    @include mq(lg){
+        margin-bottom: 180px;
+    }
+    @include mq(xl){
+        margin-bottom: 200px;
+    }
 }
 
 .mb-xl {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
+
 }
 
+.mb-xxl {
+    margin-bottom: 200px;
+}
 
 
 
