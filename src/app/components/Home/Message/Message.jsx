@@ -1,4 +1,4 @@
-import "src/app/components/Message/Message.scss"
+import "src/app/components/Home/Message/Message.scss"
 
 export const Message = () => {
     return (

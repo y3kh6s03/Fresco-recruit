@@ -1,0 +1,157 @@
+@use "src/app/styles/_mq.scss" as *;
+@use "src/app/styles/_common.scss" as *;
+
+
+.jobs {
+    position: relative;
+    height: auto;
+    margin-bottom: 250px;
+    // @extend .mb-xxl;
+
+
+    & .section__title {
+        @extend .font-lg;
+        writing-mode: vertical-lr;
+        white-space: nowrap;
+        mix-blend-mode:initial;
+        line-height: 1;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 99;
+
+        @include mq(md) {
+            top: 0;
+        }
+        @include mq(xl) {
+            right: 5%;
+        }
+
+
+        &::before {
+            content: "Jobs";
+            writing-mode: horizontal-tb;
+            width: 100%;
+            height: 100%;
+            @extend .font-xxl;
+            opacity: .1;
+            position: absolute;
+            top: -50px;
+            right: 600%;
+            z-index: -1;
+        }
+    }
+
+    &__img__container {
+        width: 100vw;
+        height: 250px;
+        position: absolute;
+        top: 130px;
+        left: 0;
+
+        @include mq(md) {
+            height: 350px;
+        }
+
+        @include mq(lg) {
+            height: 450px;
+            top: 200px;
+        }
+        @include mq(xl) {
+            height: 450px;
+            top: 280px;
+        }
+
+        & img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .jobs__inner {
+        padding-top: 380px;
+
+        @include mq(sm) {
+            position: relative;
+        }
+
+        @include mq(md) {
+            padding-top: 480px;
+        }
+
+        @include mq(lg) {
+            padding: 670px 50px 0 0 ;
+            width: 50vw
+        }
+
+        @include mq(xl) {
+            padding: 750px 50px 0 0 ;
+            width: 50vw
+        }
+
+
+        &__title {
+            @extend .font-lg;
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        &__content {
+            @extend .font-md;
+            width: 100%;
+            max-width: 700px;
+
+            mix-blend-mode: difference;
+            margin-bottom: 30px;
+        }
+
+        & .button__container {
+            bottom: -50px;
+            right: 50%;
+            transform: translate(50%, 0);
+
+            @include mq(sm) {
+                left: 0;
+                transform: translate(0%, 0);
+            }
+
+            @include mq(md) {
+                left: 0;
+            }
+            @include mq(lg) {
+                bottom: -100px;
+            }
+        }
+    }
+
+    &__img__container2 {
+        width: 40vw;
+        height: 200px;
+        position: absolute;
+        bottom: -220px;
+        right: 0;
+        opacity: 0;
+
+        @include mq(sm) {
+            opacity: 1;
+        }
+        @include mq(md) {
+            height: 230px;
+            bottom: -240px;
+            right: 10%;
+        }
+        @include mq(lg) {
+            height: 400px;
+            bottom: -150px;
+            right: 5%;
+        }
+
+        & img {
+            object-fit: cover;
+            object-position: center;
+            border-radius: 100px 0 100px 0;
+        }
+    }
+
+
+}

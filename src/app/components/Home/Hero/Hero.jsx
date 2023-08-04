@@ -1,6 +1,6 @@
 import { Scroll } from "@/app/components/Scroll/Scroll"
 import Image from "next/image"
-import "src/app/components/Hero/Hero.scss"
+import "src/app/components/Home/Hero/Hero.scss"
 
 export const Hero = () => {
     return (
