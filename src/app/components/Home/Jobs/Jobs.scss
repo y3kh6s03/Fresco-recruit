@@ -13,6 +13,7 @@
         @extend .font-lg;
         writing-mode: vertical-lr;
         white-space: nowrap;
+        mix-blend-mode:initial;
         line-height: 1;
         position: absolute;
         top: 50px;
@@ -45,7 +46,7 @@
         width: 100vw;
         height: 250px;
         position: absolute;
-        top: 200px;
+        top: 130px;
         left: 0;
 
         @include mq(md) {
@@ -54,7 +55,11 @@
 
         @include mq(lg) {
             height: 450px;
-            top: 300px;
+            top: 200px;
+        }
+        @include mq(xl) {
+            height: 450px;
+            top: 280px;
         }
 
         & img {
@@ -64,23 +69,23 @@
     }
 
     .jobs__inner {
-        padding-top: 480px;
+        padding-top: 380px;
 
         @include mq(sm) {
             position: relative;
         }
 
         @include mq(md) {
-            padding-top: 560px;
+            padding-top: 480px;
         }
 
         @include mq(lg) {
-            padding: 760px 50px 0 0 ;
+            padding: 670px 50px 0 0 ;
             width: 50vw
         }
 
         @include mq(xl) {
-            padding: 785px 50px 0 0 ;
+            padding: 750px 50px 0 0 ;
             width: 50vw
         }
 
