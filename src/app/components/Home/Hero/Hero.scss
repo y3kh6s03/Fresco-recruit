@@ -4,44 +4,76 @@
 .hero {
     width: 100vw;
     z-index: -1;
+    @extend .mb-lg;
 
     &__title {
-        @extend .font-xl;
         margin: 100px 0;
         position: relative;
 
-        @include mq(xl){
+        @include mq(md) {
             margin: 150px 0;
         }
 
-        &::before{
-            content: "MEAL FOR SMILE";
+        @include mq(lg) {
+            margin: 180px 0;
+        }
+
+        @include mq(xl) {
+            margin: 220px 0;
+        }
+
+        & span {
+            display: inline-block;
+            @extend .font-md;
+            font-weight: bold;
+            transform: translateX(7%)
+        }
+
+        & h1 {
+            @extend .font-xl;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0;
+
+        }
+
+        &::before {
+            font-weight: 700;
             @extend .font-xxl;
-            opacity: .05;
-            line-height: 1;
+            color: #839C96;
+            display: block;
+            width: 250px;
+            content: "MEAL FOR SMILE";
+            opacity: .1;
+            line-height: .9;
             position: absolute;
             top: 50%;
-            left: 0;
-            transform: translate(10%, -50%);
+            right: 0;
+            transform: translate(-20%, -50%);
             z-index: -1;
 
-            @include mq(md){
-                top: 50%;
+            @include mq(md) {
+                transform: translate(-100%, -50%);
+            }
+
+            @include mq(xl) {
+                line-height: .8;
+                transform: translate(-220%, -50%);
             }
         }
     }
 
-    &__inner{
+    &__inner {
         width: 100vw;
         height: 400px;
         margin: 0 calc(50% - 50vw);
         position: relative;
 
-        @include mq(md){
+        @include mq(md) {
             height: 650px;
         }
 
-        @include mq(lg){
+        @include mq(lg) {
             height: 850px;
         }
     }
@@ -50,21 +82,11 @@
         width: 85%;
         height: 100%;
         overflow: hidden;
-        border-radius: 0 0 0 200px;
+        border-radius: 20px 0 0 20px;
         position: absolute;
         top: 0;
         right: 0;
 
-        @include mq(md){
-            border-radius: 0 0 0 400px;
-        }
-        @include mq(lg){
-            border-radius: 0 0 0 500px;
-        }
-        @include mq(xl){
-            border-radius: 0 0 0 600px;
-            width: 90%;
-        }
 
         &__img {
             display: inline-block;
@@ -102,21 +124,26 @@
                 opacity: 0;
                 transform: scale(1);
             }
+
             4.16% {
                 opacity: 1;
             }
+
             33.33% {
                 opacity: 1;
             }
+
             41.66% {
                 opacity: 0;
                 transform: scale(1.2);
             }
+
             100% {
                 opacity: 0;
             }
         }
     }
+
     & .scroll {
         position: absolute;
         top: 0;
