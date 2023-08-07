@@ -1,4 +1,6 @@
 import { NavBar } from './components/Navbar/NavBar'
+import { Footer } from '@/app/components/Footer/Footer';
+
 import 'src/app/styles/globals.scss'
 import { Noto_Sans, Noto_Sans_JP} from 'next/font/google'
 
@@ -32,6 +34,7 @@ export default function RootLayout({ children }) {
         <div className="wrapper">
           <NavBar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
