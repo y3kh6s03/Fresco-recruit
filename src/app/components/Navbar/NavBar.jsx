@@ -60,11 +60,11 @@ export const NavBar = () => {
             <div className="mobile__header">
                 <nav className={`mobile__nav ${menuClass ? 'mobile__nav__show' : ''}`}>
                     <div className="mobile__nav__title">
-                        <Image src="/images/fresco_logo.png" width='250' height='35' alt="mobile-logo"></Image>
+                        <Image src="/images/fresco_logo.png" width='150' height='30' alt="mobile-logo"></Image>
                         <h2>2024 Recruit Site</h2>
                     </div>
 
-                    <div className="mobile__icon" onClick={onMenuOpen}>
+                    <div className="mobile__menu__icon" onClick={onMenuOpen}>
                         <span></span>
                         <span></span>
                         <span></span>

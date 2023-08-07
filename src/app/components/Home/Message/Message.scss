@@ -3,12 +3,20 @@
 
 
 .message {
-@extend .mb-lg;
+    @extend .mb-lg;
+    background-color: #E1B58B;
+
+    & img {
+        position: absolute;
+        top: -10% !important;
+        right: -10% !important;
+    }
 
     & .section__title {
         @extend .font-lg;
         @extend .mb-sm;
         line-height: 1.2;
+        padding-top: 70px;
 
         & span {
             @extend .font-sm;
