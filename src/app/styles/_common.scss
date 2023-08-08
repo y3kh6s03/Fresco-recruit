@@ -1,9 +1,10 @@
 @use './mq' as *;
 
-$cBlack: rgb(86, 85, 85);
-$cGreen: rgb(1, 146, 5);
-$cOrange: rgb(209, 139, 9);
-$cBcc: rgb(255, 245, 226);
+$cBlack: #333333;
+$cGreen: #839C96;
+$cOrange: #E1B58B;
+$cBcc: #F4F2E0;
+$cBlue: #AACBD0;
 
 * {
     @extend .font-sm;
@@ -111,16 +112,20 @@ margin
 
 .mb-lg {
     margin-bottom: 100px;
-    @include mq(sm){
+
+    @include mq(sm) {
         margin-bottom: 130px;
     }
-    @include mq(md){
+
+    @include mq(md) {
         margin-bottom: 150px;
     }
-    @include mq(lg){
+
+    @include mq(lg) {
         margin-bottom: 180px;
     }
-    @include mq(xl){
+
+    @include mq(xl) {
         margin-bottom: 200px;
     }
 }

@@ -40,7 +40,7 @@
         &::before {
             font-weight: 700;
             @extend .font-xxl;
-            color: #839C96;
+            color: $cGreen;
             display: block;
             width: 250px;
             content: "MEAL FOR SMILE";

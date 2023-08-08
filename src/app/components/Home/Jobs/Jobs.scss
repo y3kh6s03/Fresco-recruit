@@ -2,156 +2,157 @@
 @use "src/app/styles/_common.scss" as *;
 
 
-.jobs {
+.job {
     position: relative;
-    height: auto;
-    margin-bottom: 250px;
-    // @extend .mb-xxl;
+    height: 750px;
 
-
-    & .section__title {
-        @extend .font-lg;
-        writing-mode: vertical-lr;
-        white-space: nowrap;
-        mix-blend-mode:initial;
-        line-height: 1;
+    &::before {
+        content: "";
+        width: 75vw;
+        height: 90%;
+        background-color: $cBlue;
         position: absolute;
-        top: 50px;
-        right: 0;
-        z-index: 99;
+        top: 0;
+        left: 0;
+        z-index: -99;
+    }
 
-        @include mq(md) {
-            top: 0;
+    & .block {
+        width: 10px;
+        height: 10px;
+        margin: auto;
+      }
+      .circleText {
+        overflow: visible;
+        width: 150px;
+        position: absolute;
+        top: -10%;
+        right: 6%;
+        animation: rotation 18s linear infinite;
+        &__circle {
+          fill: none;
         }
-        @include mq(xl) {
-            right: 5%;
+        &__text {
+          fill: white;
         }
 
+        @keyframes rotation {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+      }
+
+    .section__title {
+        @extend .font-md;
+        color: white;
+        padding-top: 50px;
 
         &::before {
             content: "Jobs";
-            writing-mode: horizontal-tb;
+            font-size: 60px;
+            line-height: 1;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            opacity: .2;
+        }
+    }
+
+    &__card {
+        width: 85vw;
+        height: 150px;
+        background-image: url(/images/home/ca-creative-QLjeFvxpdxc-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        margin-left: 12%;
+        padding-top: 10px;
+        border-radius: 20px 0 0 0;
+        position: relative;
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+
+        &:nth-of-type(2) {
+            background-image: url(/images/home/spoon-g7df112c42_1280.jpg);
+            border-radius: 0 0 0 0;
+        }
+
+        &:nth-of-type(3) {
+            background-image: url(/images/home/team-gd7bbe42f8_1280.jpg);
+            border-radius: 0 0 0 20px;
+        }
+
+
+
+        &::before {
+            content: "";
             width: 100%;
             height: 100%;
-            @extend .font-xxl;
-            opacity: .1;
+            background-color: black;
+            opacity: .3;
             position: absolute;
-            top: -50px;
-            right: 600%;
-            z-index: -1;
-        }
-    }
-
-    &__img__container {
-        width: 100vw;
-        height: 250px;
-        position: absolute;
-        top: 130px;
-        left: 0;
-
-        @include mq(md) {
-            height: 350px;
+            top: 0;
+            left: 0;
+            z-index: -00;
         }
 
-        @include mq(lg) {
-            height: 450px;
-            top: 200px;
-        }
-        @include mq(xl) {
-            height: 450px;
-            top: 280px;
-        }
-
-        & img {
-            object-fit: cover;
-            object-position: center;
-        }
-    }
-
-    .jobs__inner {
-        padding-top: 380px;
-
-        @include mq(sm) {
+        &__num {
+            display: inline-block;
+            @extend .font-xl;
+            line-height: 1;
+            color: white;
             position: relative;
+            margin: 0 0 0 30px
         }
-
-        @include mq(md) {
-            padding-top: 480px;
-        }
-
-        @include mq(lg) {
-            padding: 670px 50px 0 0 ;
-            width: 50vw
-        }
-
-        @include mq(xl) {
-            padding: 750px 50px 0 0 ;
-            width: 50vw
-        }
-
 
         &__title {
-            @extend .font-lg;
-            line-height: 1.1;
-            margin: 15px 0;
-        }
+            z-index: 10;
 
-        &__content {
-            @extend .font-md;
-            width: 100%;
-            max-width: 700px;
+            & span {
+                @extend .font-sm;
 
-            mix-blend-mode: difference;
-            margin-bottom: 30px;
+                color: white;
+            }
+
+            & h3 {
+                color: white;
+                @extend .font-md;
+                margin: 0;
+            }
+
         }
 
         & .button__container {
-            bottom: -50px;
-            right: 50%;
-            transform: translate(50%, 0);
-
-            @include mq(sm) {
-                left: 0;
-                transform: translate(0%, 0);
-            }
-
-            @include mq(md) {
-                left: 0;
-            }
-            @include mq(lg) {
-                bottom: -100px;
-            }
+            top: 50%;
+            left: 50px;
+            transform: scale(.8);
         }
     }
 
-    &__img__container2 {
-        width: 40vw;
-        height: 200px;
+    &__img__left {
+        width: 45vw;
+        height: 45vw;
+        filter: drop-shadow(5px 5px 3px $cBlack);
         position: absolute;
-        bottom: -220px;
-        right: 0;
-        opacity: 0;
-
-        @include mq(sm) {
-            opacity: 1;
-        }
-        @include mq(md) {
-            height: 230px;
-            bottom: -240px;
-            right: 10%;
-        }
-        @include mq(lg) {
-            height: 400px;
-            bottom: -150px;
-            right: 5%;
-        }
-
-        & img {
+        bottom: -0%;
+        left: 0;
+        & img{
             object-fit: cover;
-            object-position: center;
-            border-radius: 100px 0 100px 0;
         }
     }
-
-
+    &__img__right {
+        width: 25vw;
+        height: 25vw;
+        filter: drop-shadow(5px 5px 3px $cBlack);
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        & img{
+            object-fit: cover;
+        }
+    }
 }
