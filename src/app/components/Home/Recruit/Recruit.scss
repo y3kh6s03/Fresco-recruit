@@ -1,0 +1,166 @@
+@use 'src/app/styles/_mq.scss' as *;
+@use 'src/app/styles/_common.scss' as *;
+
+.recruit {
+
+    & .section__title {
+
+        & h2 {
+            @extend .font-md;
+            position: relative;
+
+            &:before {
+                font-size: 60px;
+                line-height: 1;
+                color: $cBlue;
+                opacity: .3;
+                content: "Recruit";
+                width: 100%;
+                position: absolute;
+                top: -160%;
+                left: 0;
+            }
+        }
+    }
+
+    &__new {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        @extend .mb-sm;
+        padding: 3%;
+        background-color: $cOrange;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: $cGreen;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all .3s ease-in-out;
+        }
+
+        &:nth-child(3){
+            background-color: $cBlue;
+        }
+
+        &__content {
+            z-index: 100;
+
+            & h3 {
+                @extend .font-lg;
+                color: white;
+                margin: 0;
+            }
+
+            & span {
+                display: inline-block;
+                @extend .font-sm;
+                color: white;
+                position: relative;
+                margin-left: 18%;
+
+                &::before {
+                    content: "";
+                    width: 55%;
+                    height: 1px;
+                    background-color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: -60%;
+                }
+            }
+
+            & p {
+                color: white;
+                @extend .font-sm;
+            }
+        }
+
+        &__arrow {
+            position: relative;
+
+            & span {
+
+
+                &:nth-child(1) {
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    background-color: $cBcc;
+                    border-radius: 50%;
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background-color: $cOrange;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 50%;
+                        transform: scale(0);
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 1px;
+                        background-color: $cOrange;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, calc(-50% - 4px)) rotate(45deg);
+                        z-index: 1000;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 1px;
+                        background-color: $cOrange;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, calc(-50% + 3px)) rotate(-45deg);
+                        z-index: 1000;
+                    }
+
+                }
+            }
+        }
+
+        &:hover {
+            &::before {
+                transform: scaleX(1);
+                transition: all .5s;
+            }
+        }
+
+        // @keyframes newButtonAnime {
+        //     0% {
+        //         transform: scale(0);
+        //     }
+        //     100% {
+        //         transform: scaleX(1);
+        //     }
+        // }
+    }
+
+
+}
