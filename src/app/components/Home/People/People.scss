@@ -1,0 +1,83 @@
+@use 'src/app/styles/_mq.scss' as *;
+@use 'src/app/styles/_common.scss' as *;
+
+
+.people {
+    padding-left: 5%;
+    position: relative;
+
+    & .section__title {
+        position: relative;
+        padding-top: 60px;
+        @extend .font-md;
+
+        &::before {
+            content: "People";
+            font-size: 60px;
+            color: $cBlue;
+            opacity: .3;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__card {
+        width: 65vw;
+        height: 350px;
+        margin-top: 70px;
+        position: relative;
+
+        @include mq(md) {
+            height: 400px;
+        }
+
+        @include mq(lg) {
+            width: 50vw;
+            height: 550px;
+        }
+
+        @include mq(xl) {
+            height: 600px;
+        }
+
+        & img {
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+        }
+
+        &__num {
+            & span {
+                @extend .font-xxl;
+                font-weight: bold;
+                position: absolute;
+                color: $cOrange;
+                top: -15%;
+                left: 5%;
+            }
+        }
+
+        &__contents {
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+
+            & h3 {
+                @extend .font-lg;
+                color: white;
+            }
+
+            & p {
+                color: white;
+
+            }
+        }
+    }
+
+
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear !important;
+}
