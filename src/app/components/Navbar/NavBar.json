@@ -1,0 +1,32 @@
+[
+    {
+        "href": "#",
+        "enPageName": "Home",
+        "jaPageName": "ホーム"
+    },
+    {
+        "href": "#",
+        "enPageName": "Business",
+        "jaPageName": "事業について"
+    },
+    {
+        "href": "#",
+        "enPageName": "Jobs",
+        "jaPageName": "仕事について"
+    },
+    {
+        "href": "#",
+        "enPageName": "People",
+        "jaPageName": "フレスコの人"
+    },
+    {
+        "href": "#",
+        "enPageName": "Recruit",
+        "jaPageName": "求人情報"
+    },
+    {
+        "href": "#",
+        "enPageName": "Contact",
+        "jaPageName": "お問い合わせ"
+    }
+]
