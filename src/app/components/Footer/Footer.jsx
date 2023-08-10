@@ -8,7 +8,7 @@ import { useState } from "react";
 import "src/app/components/Footer/Footer.scss"
 
 
-export const Footer = ({ FooterJson }) => {
+export const Footer = ({ footerItems }) => {
 
     const [selected, setSlected] = useState(null);
 
@@ -23,7 +23,7 @@ export const Footer = ({ FooterJson }) => {
         <div className="footer">
             <nav className="mobile nav">
                 {
-                    FooterJson.map((FooterItem, i) => {
+                    footerItems.map((footerItem, i) => {
                         return (
                             <ul key={i}
                                 className="nav__ul"
@@ -31,14 +31,14 @@ export const Footer = ({ FooterJson }) => {
                                 <li className="nav__ul__item">
                                     <div>
                                         <p>
-                                            {FooterItem.title}
+                                            {footerItem.title}
                                         </p>
                                         <span>
-                                            {FooterItem.jaTitle}
+                                            {footerItem.jaTitle}
                                         </span>
                                     </div>
                                     {
-                                        FooterItem.types.map((type) => {
+                                        footerItem.types.map((type) => {
                                             return (
                                                 <ul key={type}
                                                     className={selected === i ? "open" : ""}>

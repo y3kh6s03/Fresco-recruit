@@ -4,7 +4,8 @@ import { Footer } from '@/app/components/Footer/Footer';
 import 'src/app/styles/globals.scss'
 import { Noto_Sans, Noto_Sans_JP } from 'next/font/google'
 
-import FooterJson from '@/app/components/Footer/Footer.json'
+import footerItems from '@/app/components/footer/footer.json'
+import navBarItems from '@/app/components/navBar/navBar.json'
 
 
 const notojp = Noto_Sans_JP({
@@ -33,9 +34,9 @@ export default function RootLayout({ children }) {
     <html lang="ja" className={`${noto.variable} ${notojp.variable}`}>
       <body>
         <div className="wrapper">
-          <NavBar></NavBar>
+          <NavBar navBarItems={navBarItems}></NavBar>
           {children}
-          <Footer FooterJson={FooterJson}></Footer>
+          <Footer footerItems={footerItems}></Footer>
         </div>
       </body>
     </html>
