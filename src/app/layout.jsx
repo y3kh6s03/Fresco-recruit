@@ -1,4 +1,4 @@
-import { NavBar } from './components/Navbar/NavBar'
+import { NavBar } from './components/NavBar/NavBar'
 import { Footer } from '@/app/components/Footer/Footer';
 
 import 'src/app/styles/globals.scss'
