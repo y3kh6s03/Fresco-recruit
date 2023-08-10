@@ -37,10 +37,10 @@ export const Jobs = ({ jobs }) => {
                 )
             })}
             <div className="job__img__left">
-                <Image src="/images/home/salad.png" fill alt="job__img"></Image>
+                <Image src="/images/home/salad.png" fill sizes="100%" alt="job__img"></Image>
             </div>
             <div className="job__img__right">
-                <Image src="/images/home/pumpkin.png" fill alt="job__img"></Image>
+                <Image src="/images/home/pumpkin.png" fill sizes="100%" alt="job__img"></Image>
             </div>
         </section>
     )

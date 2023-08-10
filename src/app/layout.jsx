@@ -2,12 +2,13 @@ import { NavBar } from './components/Navbar/NavBar'
 import { Footer } from '@/app/components/Footer/Footer';
 
 import 'src/app/styles/globals.scss'
-import { Noto_Sans, Noto_Sans_JP} from 'next/font/google'
+import { Noto_Sans, Noto_Sans_JP } from 'next/font/google'
 
+import FooterJson from '@/app/components/Footer/Footer.json'
 
 
 const notojp = Noto_Sans_JP({
-  weight: ["400","700"],
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-notojp",
   display: "swap",
@@ -32,9 +33,9 @@ export default function RootLayout({ children }) {
     <html lang="ja" className={`${noto.variable} ${notojp.variable}`}>
       <body>
         <div className="wrapper">
-          <NavBar />
+          <NavBar></NavBar>
           {children}
-          <Footer />
+          <Footer FooterJson={FooterJson}></Footer>
         </div>
       </body>
     </html>

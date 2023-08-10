@@ -1,4 +1,160 @@
-.footer{
+@use 'src/app/styles/_mq.scss' as *;
+@use 'src/app/styles/_common.scss' as *;
+
+.footer {
+    background-color: $cGreen;
+    // border-radius: 50% 50% 0 0;
+    width: 120vw;
+    margin: 0 calc(50vw - 50%);
+
+
+    & .nav {
+        padding: 5%;
+
+        &__ul {
+
+            &__item {
+                @extend .mb-xs;
+                cursor: pointer;
+
+                & p {
+                    @extend .font-lg;
+                    color: $cBcc;
+                    margin: 0;
+                    line-height: 1;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 60px;
+                        height: 1px;
+                        background-color: $cBcc;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                    }
+                }
+
+                & span {
+                    @extend .font-sm;
+                    color: $cBcc;
+                    display: inline-block;
+                    margin: 0 0 15px 80px;
+                }
+
+                & ul {
+                    height: auto;
+                    overflow: hidden;
+                    transition: all .5s cubic-bezier(.17, .67, .71, .23);
+                }
+
+                & .open {
+                    & li {
+                        height: 20px;
+                        transition: all .5s cubic-bezier(.17, .67, .71, .23);
+                    }
+                }
+
+                & li {
+                    margin: 0 0 8px 80px;
+                    height: 0;
+                    overflow: hidden;
+                    transition: all .5s cubic-bezier(.17, .67, .71, .23);
+
+
+                    & a {
+                        color: $cBcc;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .info {
+        padding: 0 5% 80px;
+        width: 100vw;
+
+
+        &__contents {
+            &__image {
+                position: relative;
+                width: 200px;
+                height: 30px;
+
+                & img {
+                    display: inline-block;
+                    object-fit: cover;
+                    object-position: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &__address {
+                color: $cBcc;
+
+            }
+
+            &__tell {
+                color: $cBcc;
+
+            }
+
+            &__fax {
+                color: $cBcc;
+
+            }
+        }
+
+        &__map {
+            width: 100%;
+
+            & iframe{
+            width: 100%;
+            }
+        }
+    }
+
+    & small{
+        width: 100Vw;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     &::after {
         animation: noise 8s steps(10) infinite;
         background: url("/images/noise.png");
