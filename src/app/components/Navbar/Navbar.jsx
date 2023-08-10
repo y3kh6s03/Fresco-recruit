@@ -56,12 +56,12 @@ export const NavBar = ({ navbarItems }) => {
 
                     <ul className="mobile__nav__ul" onClick={onMenuOpen}>
                         {
-                            navBarItems.map((navBarItem) => {
+                            navbarItems.map((navbarItem) => {
                                 return (
-                                    <li key={navBarItem.enPageName} className="mobile__nav__li">
-                                        <Link href={navBarItem.href}>
-                                            {navBarItem.enPageName}<br />
-                                            <span>{navBarItem.jaPageName}</span>
+                                    <li key={navbarItem.enPageName} className="mobile__nav__li">
+                                        <Link href={navbarItem.href}>
+                                            {navbarItem.enPageName}<br />
+                                            <span>{navbarItem.jaPageName}</span>
                                         </Link>
                                     </li>
                                 )
