@@ -7,7 +7,7 @@ import { useState } from "react"
 
 
 
-export const NavBar = ({ navBarItems }) => {
+export const NavBar = ({ navbarItems }) => {
 
     const [menuClass, setMenuClass] = useState(false);
 
@@ -25,42 +25,17 @@ export const NavBar = ({ navBarItems }) => {
                     </div>
                     <ul className="pc__nav__ul">
                         {
-                            navBarItems.map((navBarItem) => {
+                            navbarItems.map((navbarItem) => {
                                 return (
-                                    <li key={navBarItem.enPageName} className="pc__nav__li">
-                                        <Link href={navBarItem.href}>
-                                            {navBarItem.enPageName}<br />
-                                            <span>{navBarItem.jaPageName}</span>
+                                    <li key={navbarItem.enPageName} className="pc__nav__li">
+                                        <Link href={navbarItem.href}>
+                                            {navbarItem.enPageName}<br />
+                                            <span>{navbarItem.jaPageName}</span>
                                         </Link>
                                     </li>
                                 )
                             })
                         }
-
-                        {/* <li className="pc__nav__li">
-                            <Link href='#'>
-                                Business<br />
-                                <span>事業について</span>
-                            </Link>
-                        </li>
-                        <li className="pc__nav__li">
-                            <Link href='#'>
-                                Works<br />
-                                <span>仕事について</span>
-                            </Link>
-                        </li>
-                        <li className="pc__nav__li">
-                            <Link href='#'>
-                                People<br />
-                                <span>働く人について</span>
-                            </Link>
-                        </li>
-                        <li className="pc__nav__li">
-                            <Link href='#'>
-                                Recruit<br />
-                                <span>求人情報</span>
-                            </Link>
-                        </li> */}
                     </ul>
                 </nav >
             </div>
