@@ -7,7 +7,7 @@ import { useState } from "react"
 
 
 
-export const NavBar = () => {
+export const NavBar = ({ navBarItems }) => {
 
     const [menuClass, setMenuClass] = useState(false);
 
@@ -24,13 +24,20 @@ export const NavBar = () => {
                         <h2>2024 Recruit Site</h2>
                     </div>
                     <ul className="pc__nav__ul">
-                        <li className="pc__nav__li">
-                            <Link href='#'>
-                                About<br />
-                                <span>会社概要</span>
-                            </Link>
-                        </li>
-                        <li className="pc__nav__li">
+                        {
+                            navBarItems.map((navBarItem) => {
+                                return (
+                                    <li key={navBarItem.enPageName} className="pc__nav__li">
+                                        <Link href={navBarItem.href}>
+                                            {navBarItem.enPageName}<br />
+                                            <span>{navBarItem.jaPageName}</span>
+                                        </Link>
+                                    </li>
+                                )
+                            })
+                        }
+
+                        {/* <li className="pc__nav__li">
                             <Link href='#'>
                                 Business<br />
                                 <span>事業について</span>
@@ -53,7 +60,7 @@ export const NavBar = () => {
                                 Recruit<br />
                                 <span>求人情報</span>
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav >
             </div>
@@ -61,7 +68,7 @@ export const NavBar = () => {
                 <nav className={`mobile__nav ${menuClass ? 'mobile__nav__show' : ''}`}>
                     <div className="mobile__nav__title">
                         <Image src="/images/fresco_logo.png" width='150' height='30' alt="mobile-logo"></Image>
-                        <h2>2024 Recruit Site</h2>
+                        <h2>2025 Recruit Site</h2>
                     </div>
 
                     <div className="mobile__menu__icon" onClick={onMenuOpen}>
@@ -70,43 +77,21 @@ export const NavBar = () => {
                         <span></span>
                     </div>
 
+
+
                     <ul className="mobile__nav__ul" onClick={onMenuOpen}>
-                        <li className="mobile__nav__li">
-                            <Link href='#'>
-                                Home<br />
-                                <span>トップ</span>
-                            </Link>
-                        </li>
-                        <li className="mobile__nav__li">
-                            <Link href='#'>
-                                About<br />
-                                <span>会社概要</span>
-                            </Link>
-                        </li>
-                        <li className="mobile__nav__li">
-                            <Link href='#'>
-                                Business<br />
-                                <span>事業について</span>
-                            </Link>
-                        </li>
-                        <li className="mobile__nav__li">
-                            <Link href='#'>
-                                Works<br />
-                                <span>仕事について</span>
-                            </Link>
-                        </li>
-                        <li className="mobile__nav__li">
-                            <Link href='#'>
-                                People<br />
-                                <span>働く人について</span>
-                            </Link>
-                        </li>
-                        <li className="mobile__nav__li">
-                            <Link href='#'>
-                                Recruit<br />
-                                <span>求人情報</span>
-                            </Link>
-                        </li>
+                        {
+                            navBarItems.map((navBarItem) => {
+                                return (
+                                    <li key={navBarItem.enPageName} className="mobile__nav__li">
+                                        <Link href={navBarItem.href}>
+                                            {navBarItem.enPageName}<br />
+                                            <span>{navBarItem.jaPageName}</span>
+                                        </Link>
+                                    </li>
+                                )
+                            })
+                        }
                     </ul>
                 </nav >
             </div>
