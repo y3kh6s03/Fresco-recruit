@@ -2,6 +2,8 @@
 @use 'src/app/styles/_common.scss' as *;
 
 .recruit {
+    @extend .mb-lg;
+
 
     & .section__title {
 

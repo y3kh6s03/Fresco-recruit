@@ -5,6 +5,7 @@
 .people {
     padding-left: 5%;
     position: relative;
+    @extend .mb-lg;
 
     & .section__title {
         position: relative;
