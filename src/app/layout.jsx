@@ -4,8 +4,8 @@ import { Footer } from '@/app/components/Footer/Footer';
 import 'src/app/styles/globals.scss'
 import { Noto_Sans, Noto_Sans_JP } from 'next/font/google'
 
-import footerItems from '@/app/components/footer/footer.json'
-import navBarItems from '@/app/components/navBar/navBar.json'
+import footerItems from '@/app/components/Footer/footer.json'
+import navBarItems from '@/app/components/NavBar/navBar.json'
 
 
 const notojp = Noto_Sans_JP({
