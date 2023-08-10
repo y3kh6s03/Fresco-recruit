@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import "src/app/components/Navbar/Navbar.scss"
+import "src/app/components/NavBar/NavBar.scss"
 import { useState } from "react"
 
 
