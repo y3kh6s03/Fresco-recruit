@@ -11,7 +11,7 @@ import peoples from '@/app/components/Home/People/People.json'
 import jobs from '@/app/components/Home/Jobs/Jobs.json'
 
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
       <Hero></Hero>
@@ -23,3 +23,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home;

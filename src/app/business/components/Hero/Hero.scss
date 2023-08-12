@@ -1,0 +1,44 @@
+@use 'src/app/styles/_mq.scss' as *;
+@use 'src/app/styles/_common.scss' as *;
+
+
+.hero {
+    padding-top: 80px;
+    &__page__title {
+        @extend .font-xl;
+    }
+    &__page__jatitle {
+        display: block;
+    }
+
+    &__image__container {
+        width: 100vw;
+        height: 300px;
+        position: relative;
+
+        & img {
+            width: 75% !important;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            left: auto !important;
+            border-radius: 20px 0 0 20px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__contents {
+        &__headline {
+            @extend .font-lg;
+            width: 80%;
+            color: $cGreen;
+
+        }
+        & p {
+            @extend .font-sm;
+        }
+    }
+
+
+}
