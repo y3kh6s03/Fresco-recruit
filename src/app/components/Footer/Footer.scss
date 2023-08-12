@@ -3,19 +3,29 @@
 
 .footer {
     background-color: $cGreen;
-    // border-radius: 50% 50% 0 0;
-    width: 120vw;
+    width: 100vw;
     margin: 0 calc(50vw - 50%);
 
 
     & .nav {
         padding: 5%;
+        margin: 0 auto;
+
+        @include mq(lg) {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
 
         &__ul {
+            @include mq(lg) {
+                width: 25%;
+            }
 
             &__item {
                 @extend .mb-xs;
                 cursor: pointer;
+
 
                 & p {
                     @extend .font-lg;
@@ -23,6 +33,12 @@
                     margin: 0;
                     line-height: 1;
                     position: relative;
+
+                    @include mq(lg) {
+                        font-size: 35px;
+                    }
+
+
 
                     &::before {
                         content: "";
@@ -33,6 +49,10 @@
                         position: absolute;
                         bottom: -10px;
                         left: 0;
+
+                        @include mq(lg) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -41,21 +61,20 @@
                     color: $cBcc;
                     display: inline-block;
                     margin: 0 0 15px 80px;
+
+                    @include mq(lg) {
+                        margin: 0 0 15px 0;
+                    }
                 }
 
                 & ul {
                     height: 0;
                     overflow: hidden;
-                    transition: all .5s cubic-bezier(.67,-0.13,.32,1);
-                }
+                    transition: all .5s cubic-bezier(.67, -0.13, .32, 1);
 
-                & .open {
-                    height: 30px;
-                    transition: all .5s cubic-bezier(.67,-0.13,.32,1);
-
-                    & li {
-                        height: 20px;
-                        transition: all .5s cubic-bezier(.67,-0.13,.32,1);
+                    @include mq(lg) {
+                        height: 30px;
+                        overflow: auto;
                     }
                 }
 
@@ -63,13 +82,30 @@
                     margin: 0 0 8px 80px;
                     height: 0;
                     overflow: hidden;
-                    transition: all .5s cubic-bezier(.67,-0.13,.32,1);
+                    transition: all .5s cubic-bezier(.67, -0.13, .32, 1);
 
+                    @include mq(lg) {
+                        margin: 0 0 8px 0px;
+                        height: 20px;
+                        overflow: auto;
+                    }
 
                     & a {
                         color: $cBcc;
                     }
                 }
+
+                & .open {
+                    height: 30px;
+                    transition: all .5s cubic-bezier(.67, -0.13, .32, 1);
+
+                    & li {
+                        height: 20px;
+                        transition: all .5s cubic-bezier(.67, -0.13, .32, 1);
+                    }
+                }
+
+
             }
         }
     }
@@ -79,12 +115,22 @@
         padding: 0 5% 80px;
         width: 100vw;
 
+        @include mq(lg) {
+            display: flex;
+            justify-content: space-around;
+        }
+
 
         &__contents {
+            @include mq(lg) {
+                width: 30%;
+            }
+
             &__image {
                 position: relative;
                 width: 200px;
                 height: 30px;
+
 
                 & img {
                     display: inline-block;
@@ -116,14 +162,19 @@
             width: 100%;
             height: 200px;
 
-            & iframe{
-            width: 100%;
-            height: 100%;
+            @include mq(lg) {
+                width: 55%;
+                height: 350px;
+            }
+
+            & iframe {
+                width: 100%;
+                height: 100%;
             }
         }
     }
 
-    & small{
+    & small {
         width: 100Vw;
         height: 80px;
         display: flex;

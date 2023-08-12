@@ -3,8 +3,18 @@
 
 
 .message {
-    @extend .mb-lg;
+    margin-bottom: 180px;
     position: relative;
+
+    @include mq(sm){
+        margin-bottom: 210px;
+    }
+    @include mq(md){
+        margin-bottom: 260px;
+    }
+    @include mq(lg){
+        margin-bottom: 320px;
+    }
 
 
     &::before {
@@ -19,12 +29,38 @@
     }
 
     &__top__img {
+        width: 70%;
+        height: 40%;
         position: absolute;
-        top: -5% !important;
-        right: -20% !important;
+        top: -8%;
+        right: -14%;
         filter: drop-shadow(5px 5px 5px $cBlack);
         object-fit: cover;
 
+        @include mq(sm){
+            width: 70%;
+            height: 50%;
+            top: -15%;
+        }
+        @include mq(md){
+            width: 70%;
+            height: 50%;
+            top: -25%;
+            right: -10%;
+        }
+        @include mq(xl){
+            width: 100%;
+            height: 100%;
+            top: -65%;
+            right: -30%;
+        }
+
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
     }
 
     & .section__title {
@@ -40,7 +76,6 @@
             @extend .font-sm;
             display: block;
             color: white;
-
         }
     }
 
@@ -55,12 +90,15 @@
         }
 
         &__title {
-            width: 100%;
+            width: 70%;
             @extend .font-lg;
             line-height: 1.1;
             margin: 0 0 20px;
             color: $cGreen;
 
+            @include mq(sm){
+                width: 100%;
+            }
 
             @include mq(lg) {
                 flex: 45;
@@ -89,67 +127,83 @@
         }
     }
 
-    &__bottom__img {
-        height: 150px;
-        width: 101vw;
-        position: relative;
-        margin-left: -6%;
 
-        &::before {
-            content: "　MEAL FOR SMILE.";
-            letter-spacing: 3px;
-            @extend .font-lg;
-            color: white;
-            font-weight: bold;
-            position: absolute;
-            top: 50%;
-            transform: translate(140%, -50%);
-            z-index: 101;
-            background: no-repeat left bottom 10px/8% url(/images/logo.png);
-            animation: horizonAnime 20s infinite 9s linear;
-            transition: none;
+    & .textanime__container {
+        overflow: hidden;
+        position: absolute;
+        bottom: -65px;
+        left: 0;
+
+        @include mq(sm){
+            bottom: -85px;
+        }
+        @include mq(md){
+            bottom: -100px;
+        }
+        @include mq(lg){
+            bottom: -130px;
         }
 
-        &::after {
-            content: "　MEAL FOR SMILE.";
-            @extend .font-lg;
-            letter-spacing: 3px;
-            color: white;
-            font-weight: bold;
-            position: absolute;
-            top: 50%;
-            transform: translate(140%, -50%);
-            z-index: 101;
-            background: no-repeat left bottom 10px/8% url(/images/logo.png);
-            animation: horizonAnime 20s infinite linear;
-            transition: none;
-        }
+        &__inner {
+            display: flex;
+            width: 100vw;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-image: url(/images/home/vegetables-1085063_1280.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
 
-        & img {
-            object-fit: cover;
-        }
-
-        & span {
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: Black;
-            opacity: .4;
-        }
-
-
-        @keyframes horizonAnime {
-            0% {
-                transform: translate(140%, -50%);
-            }
-            100%{
-                transform: translate(-120%, -50%);
+            &::before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: black;
+                opacity: .4;
             }
 
 
+            & p {
+                flex: 0 0 auto;
+                @extend .font-lg;
+                margin: 20px 0;
+                white-space: nowrap;
+                padding-right: 30px;
+                padding-left: 30px;
+                color: $cBcc;
+
+                &:nth-child(odd) {
+                    animation: loop 50s -25s linear infinite;
+                }
+                &:nth-child(even) {
+                    animation: loop2 50s linear infinite;
+                }
+            }
         }
     }
+
+
+
+
+    @keyframes loop {
+        0% {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes loop2 {
+        0% {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-200%);
+        }
+    }
+
 }

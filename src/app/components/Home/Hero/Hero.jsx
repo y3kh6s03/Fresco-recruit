@@ -22,6 +22,9 @@ export const Hero = () => {
                 </div>
                 <Scroll />
             </div>
+            <div className="hero__logo">
+                <Image src="/images/logo.png" fill alt="corp-logo"></Image>
+            </div>
         </div>
     )
 }

@@ -18,8 +18,24 @@
             color: $cBlue;
             opacity: .3;
             position: absolute;
-            top: 0;
+            top: -100%;
             left: 0;
+
+            @include mq(sm) {
+                font-size: 80px;
+            }
+
+            @include mq(md) {
+                font-size: 90px;
+            }
+
+            @include mq(lg) {
+                font-size: 120px;
+            }
+
+            @include mq(lg) {
+                font-size: 150px;
+            }
         }
     }
 
@@ -31,10 +47,11 @@
 
         @include mq(md) {
             height: 400px;
+            max-width: 400px;
         }
 
         @include mq(lg) {
-            width: 50vw;
+            max-width: 600px;
             height: 550px;
         }
 

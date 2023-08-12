@@ -19,8 +19,24 @@
                 content: "Recruit";
                 width: 100%;
                 position: absolute;
-                top: -160%;
+                top: -300%;
                 left: 0;
+
+                @include mq(sm) {
+                    font-size: 80px;
+                }
+
+                @include mq(md) {
+                    font-size: 90px;
+                }
+
+                @include mq(lg) {
+                    font-size: 120px;
+                }
+
+                @include mq(lg) {
+                    font-size: 150px;
+                }
             }
         }
     }
@@ -28,8 +44,9 @@
     &__new {
         display: inline-block;
         width: 100%;
+        max-width: 800px;
         height: 100%;
-        @extend .mb-sm;
+        margin: 0 auto 30px;
         padding: 3%;
         background-color: $cOrange;
         border-radius: 20px;
