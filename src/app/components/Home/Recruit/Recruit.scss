@@ -19,8 +19,9 @@
                 content: "Recruit";
                 width: 100%;
                 position: absolute;
-                top: -300%;
+                top: -200%;
                 left: 0;
+                z-index: -1;
 
                 @include mq(sm) {
                     font-size: 80px;
