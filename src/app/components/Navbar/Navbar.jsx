@@ -20,7 +20,7 @@ export const NavBar = ({ navbarItems }) => {
             <div className="pc__header">
                 <nav className="pc__nav">
                     <div className="pc__nav__title">
-                        <Image src="/images/fresco_logo.png" width='250' height='35' alt="header-logo"></Image>
+                        <Image src="/images/fresco_logo.png" width='250' height='35' alt="header-logo" priority></Image>
                         <h2>2024 Recruit Site</h2>
                     </div>
                     <ul className="pc__nav__ul">

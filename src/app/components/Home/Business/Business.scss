@@ -8,16 +8,29 @@
         @extend .font-md;
         position: relative;
 
-        &::before{
+        &::before {
             content: "Business";
             font-size: 60px;
             font-weight: bold;
             opacity: .2;
             color: $cGreen;
             position: absolute;
-            top: 50%;
-            right: 0;
+            top: -70%;
+            left: 0;
             transform: translate(0%, -50%);
+
+            @include mq(sm) {
+                font-size: 80px;
+            }
+            @include mq(md) {
+                font-size: 90px;
+            }
+            @include mq(lg) {
+                font-size: 120px;
+            }
+            @include mq(lg) {
+                font-size: 150px;
+            }
         }
 
     }
@@ -29,8 +42,19 @@
         margin-left: 12%;
         position: relative;
 
+        @include mq(lg) {
+            width: 60vw;
+            margin-left: 40%;
+        }
+        @include mq(xl) {
+            width: 60vw;
+            height: 400px;
+            margin-left: 40%;
+        }
+
         & img {
             object-fit: cover;
+            object-position: center;
             position: absolute;
             border-radius: 20px 0 0 20px;
             top: 0;
@@ -41,19 +65,27 @@
     &__inner {
         width: 85%;
 
+        @include mq(lg) {
+            width: 60%;
+        }
+
         &__title {
             @extend .font-md;
             margin: 0 0 15px;
         }
 
-        &__content{
+        &__content {
             line-height: 1.8;
             @extend .mb-xs;
         }
     }
 
-    & .button__container{
+    & .button__container {
         top: 45%;
-        filter: drop-shadow(1px 1px 1px rgba(0,0,0,.3));
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .3));
+
+        @include mq(lg){
+            filter: none;
+        }
     }
 }

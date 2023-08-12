@@ -5,7 +5,7 @@
 .scroll {
     writing-mode: vertical-rl;
     position: relative;
-    height: 240px;
+    height: 220px;
 
     @include mq(lg){
         height: 270px;
@@ -19,7 +19,7 @@
         &::before{
             content: "";
             width: 1px;
-            height: 140px;
+            height: 120px;
             background-color: $cOrange;
             opacity: .4;
             position: absolute;
@@ -30,7 +30,7 @@
         &::after{
             content: "";
             width: 2px;
-            height: 140px;
+            height: 120px;
             background-color: $cOrange;
             opacity: 1;
             position: absolute;

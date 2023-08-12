@@ -18,24 +18,26 @@ export const Jobs = ({ jobs }) => {
 
 
             <h3 className="section__title">仕事について</h3>
-            {jobs.map((job) => {
-                return (
-                    <div key={job.num} className="job__card">
-                        <span className="job__card__num">
-                            {job.num}
-                        </span>
-                        <div className="job__card__title">
-                            <span>
-                                {job.jaType}
+            <div className="job__container">
+                {jobs.map((job) => {
+                    return (
+                        <div key={job.num} className="job__card">
+                            <span className="job__card__num">
+                                {job.num}
                             </span>
-                            <h3>
-                                {job.enType}
-                            </h3>
+                            <div className="job__card__title">
+                                <span>
+                                    {job.jaType}
+                                </span>
+                                <h3>
+                                    {job.enType}
+                                </h3>
+                            </div>
+                            <Button></Button>
                         </div>
-                        <Button></Button>
-                    </div>
-                )
-            })}
+                    )
+                })}
+            </div>
             <div className="job__img__left">
                 <Image src="/images/home/salad.png" fill sizes="100%" alt="job__img"></Image>
             </div>

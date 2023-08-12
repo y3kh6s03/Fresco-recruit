@@ -4,7 +4,19 @@
 
 .job {
     position: relative;
-    height: 750px;
+    height: 730px;
+    margin-bottom: 100px;
+
+    @include mq(sm){
+        margin-bottom: 130px;
+    }
+    @include mq(md){
+        margin-bottom: 130px;
+        height: 780px;
+    }
+    @include mq(lg){
+        height: 1000px;
+    }
 
     &::before {
         content: "";
@@ -15,41 +27,62 @@
         top: 0;
         left: 0;
         z-index: -99;
+
+        @include mq(xl) {
+            width: 65vw;
+            height: 100%;
+        }
     }
 
     & .block {
         width: 10px;
         height: 10px;
         margin: auto;
-      }
-      .circleText {
+    }
+
+    & .circleText {
         overflow: visible;
         width: 150px;
         position: absolute;
         top: -10%;
-        right: 6%;
+        left: calc(75vw - 75px);
         animation: rotation 18s linear infinite;
-        &__circle {
-          fill: none;
+
+        @include mq(xl){
+            left: calc(65vw - 75px);
+            top: -8%;
         }
+
+        &__circle {
+            fill: none;
+        }
+
         &__text {
-          fill: white;
+            fill: white;
         }
 
         @keyframes rotation {
             0% {
-              transform: rotate(0deg);
+                transform: rotate(0deg);
             }
+
             100% {
-              transform: rotate(360deg);
+                transform: rotate(360deg);
             }
-          }
-      }
+        }
+    }
 
     .section__title {
         @extend .font-md;
         color: white;
         padding-top: 50px;
+
+        @include mq(sm) {
+            padding-bottom: 30px;
+        }
+        @include mq(lg) {
+            padding-bottom: 80px;
+        }
 
         &::before {
             content: "Jobs";
@@ -59,12 +92,41 @@
             position: absolute;
             top: 0;
             opacity: .2;
+
+            @include mq(sm) {
+                font-size: 80px;
+            }
+
+            @include mq(md) {
+                font-size: 90px;
+            }
+
+            @include mq(lg) {
+                font-size: 120px;
+            }
+
+            @include mq(lg) {
+                font-size: 150px;
+            }
         }
+    }
+
+    & .job__container{
+        @include mq(md){
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: calc(50% - 50vw);
+        }
+        @include mq(xl){
+            width: 70vw;
+            margin-right: calc(50% - 50vw);
+        }
+
     }
 
     &__card {
         width: 85vw;
-        height: 150px;
+        height: 110px;
         background-image: url(/images/home/ca-creative-QLjeFvxpdxc-unsplash.jpg);
         background-position: center;
         background-size: cover;
@@ -76,14 +138,46 @@
         gap: 20px;
         overflow: hidden;
 
+        @include mq(md) {
+            margin-left: 0;
+            width: 50%;
+            height: 200px;
+        }
+        @include mq(lg) {
+            height: 250px;
+        }
+        @include mq(xl) {
+            height: 300px;
+        }
+
         &:nth-of-type(2) {
             background-image: url(/images/home/spoon-g7df112c42_1280.jpg);
             border-radius: 0 0 0 0;
+
+            @include mq(xl) {
+                border-radius: 0 20px 0 0;
+            }
         }
 
         &:nth-of-type(3) {
+            background-image: url(/images/Jobs/men-3894425_1920.jpg);
+            border-radius: 0 0 0 0px;
+
+            @include mq(md){
+                border-radius: 0 0 0 20px;
+            }
+        }
+
+        &:nth-of-type(4) {
             background-image: url(/images/home/team-gd7bbe42f8_1280.jpg);
             border-radius: 0 0 0 20px;
+
+            @include mq(md){
+                border-radius: 0 0 0 0px;
+            }
+            @include mq(xl){
+                border-radius: 0 0 20px 0;
+            }
         }
 
 
@@ -138,20 +232,74 @@
         height: 45vw;
         filter: drop-shadow(5px 5px 3px $cBlack);
         position: absolute;
-        bottom: -0%;
+        bottom: -6%;
         left: 0;
-        & img{
+
+        @include mq(sm) {
+            max-width: 220px;
+            max-height: 220px;
+            bottom: -12%;
+        }
+        @include mq(md) {
+            max-width: 280px;
+            max-height: 280px;
+            bottom: -12%;
+            left: 16%;
+        }
+        @include mq(lg) {
+            max-width: 320px;
+            max-height: 320px;
+            bottom: -12%;
+            left: 20%;
+        }
+        @include mq(xl) {
+            width: 26vw;
+            height: 26vw;
+            bottom: 40%;
+            left: auto;
+            right: -5%;
+        }
+
+
+        & img {
             object-fit: cover;
         }
     }
+
     &__img__right {
         width: 25vw;
         height: 25vw;
         filter: drop-shadow(5px 5px 3px $cBlack);
         position: absolute;
-        bottom: 10%;
+        bottom: 7%;
         left: 50%;
-        & img{
+
+        @include mq(sm) {
+            width: 23vw;
+            height: 23vw;
+            bottom: 4%;
+        }
+        @include mq(md) {
+            width: 21vw;
+            max-width: 160px;
+            height: 21vw;
+            max-height: 160px;
+            bottom: 4%;
+            left: 60%;
+        }
+        @include mq(lg) {
+            bottom: 4%;
+            left: 60%;
+        }
+        @include mq(xl) {
+            width: 15vw;
+            height: 15vw;
+            bottom: 6%;
+            left: auto;
+            right: 8%;
+        }
+
+        & img {
             object-fit: cover;
         }
     }

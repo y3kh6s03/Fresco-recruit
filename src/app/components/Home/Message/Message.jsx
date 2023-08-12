@@ -14,7 +14,7 @@ export const Message = () => {
             </h2>
             <div className="message__inner">
                 <h3 className="message__inner__title">
-                    MEAL FOR<br />SMILE.
+                    MEAL FOR SMILE.
                     <span>
                         わたしたちの食事で笑顔に
                     </span>
@@ -23,11 +23,14 @@ export const Message = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, minus veniam facilis nulla aspernatur odit dolor quam, libero nam officia doloribus error ex veritatis maiores, magnam voluptate velit tempore corporis.
                 </p>
             </div>
-            <div className="message__bottom__img">
-                <Image src="/images/home/vegetables-1085063_1280.jpg" fill alt="message__image"></Image>
-                <span></span>
+            <div className="textanime__container">
+                <div className="textanime__container__inner">
+                    <p>Fresco Company.&nbsp;&nbsp;&nbsp;&nbsp;MEAL FOR SMILE.</p>
+                    <p>Fresco Company.&nbsp;&nbsp;&nbsp;&nbsp;MEAL FOR SMILE.</p>
+                    <p>Fresco Company.&nbsp;&nbsp;&nbsp;&nbsp;MEAL FOR SMILE.</p>
+                    <p>Fresco Company.&nbsp;&nbsp;&nbsp;&nbsp;MEAL FOR SMILE.</p>
+                </div>
             </div>
-
         </section>
     )
 }

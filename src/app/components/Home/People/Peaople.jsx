@@ -54,7 +54,7 @@ export const People = ({ peoples }) => {
                             return (
                                 <SwiperSlide key={people.image}>
                                     <div className="people__card">
-                                        <Image src={people.image} fill alt={people.num}></Image>
+                                        <Image src={people.image} fill sizes="100%" alt={people.num}></Image>
                                         <div className="people__card__num">
                                             <span>{people.num}</span>
                                         </div>

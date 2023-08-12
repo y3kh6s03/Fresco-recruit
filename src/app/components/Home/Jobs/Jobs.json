@@ -11,6 +11,11 @@
     },
     {
         "num": "3",
+        "jaType": "現場責任者",
+        "enType": "Leader"
+    },
+    {
+        "num": "4",
         "jaType": "管理本部",
         "enType": "Headquarters"
     }

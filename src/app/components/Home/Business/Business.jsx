@@ -17,7 +17,7 @@ export const Business = () => {
                 <Button></Button>
             </div>
             <div className="business__img__container">
-                <Image src="/images/home/mailchimp-Vc2dD4l57og-unsplash.jpg" fill alt="business-image"></Image>
+                <Image src="/images/home/mailchimp-Vc2dD4l57og-unsplash.jpg" fill sizes="100%" alt="business-image"></Image>
             </div>
         </section>
     )
