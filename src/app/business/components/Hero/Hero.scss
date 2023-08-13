@@ -4,6 +4,7 @@
 
 .hero {
     padding-top: 80px;
+    @extend .mb-lg;
     &__page__title {
         @extend .font-xl;
     }
