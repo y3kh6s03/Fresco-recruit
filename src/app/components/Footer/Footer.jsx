@@ -73,7 +73,7 @@ export const Footer = ({ footerItems }) => {
                     </p>
                 </div>
                 <div className="info__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.6265214883406!2d138.2065763!3d36.6113031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d85b0e063dc11%3A0x262a090f8bfdb634!2z77yI5pyJ77yJ44OV44Os44K544Kz44O744Kr44Oz44OR44OL44O8!5e0!3m2!1sja!2sjp!4v1691632019053!5m2!1sja!2sjp" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.6265214883406!2d138.2065763!3d36.6113031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d85b0e063dc11%3A0x262a090f8bfdb634!2z77yI5pyJ77yJ44OV44Os44K544Kz44O744Kr44Oz44OR44OL44O8!5e0!3m2!1sja!2sjp!4v1691632019053!5m2!1sja!2sjp"></iframe>
                 </div>
             </div>
 

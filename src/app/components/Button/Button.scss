@@ -1,6 +1,11 @@
 @use 'src/app/styles/_mq.scss' as *;
 @use 'src/app/styles/_common.scss' as *;
 
+button{
+    border-style: none;
+    background-color: transparent;
+}
+
 .button__container{
     width: 250px;
     position: absolute;
@@ -12,6 +17,7 @@
     background-color: transparent;
     border-style: none;
     padding: 0;
+
 
 
     &__link {
