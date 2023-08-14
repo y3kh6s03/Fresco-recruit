@@ -104,6 +104,23 @@ margin
 
 .mb-sm {
     margin-bottom: 40px;
+
+    @include mq(sm) {
+        margin-bottom: 50px;
+    }
+
+    @include mq(md) {
+        margin-bottom: 60px;
+    }
+
+    @include mq(lg) {
+        margin-bottom: 70px;
+    }
+
+    @include mq(xl) {
+        margin-bottom: 80px;
+    }
+
 }
 
 .mb-md {
@@ -131,7 +148,23 @@ margin
 }
 
 .mb-xl {
-    margin-bottom: 150px;
+    margin-bottom: 280px;
+
+    @include mq(sm) {
+        margin-bottom: 300px;
+    }
+
+    @include mq(md) {
+        margin-bottom: 320px;
+    }
+
+    @include mq(lg) {
+        margin-bottom: 350px;
+    }
+
+    @include mq(xl) {
+        margin-bottom: 400px;
+    }
 
 }
 

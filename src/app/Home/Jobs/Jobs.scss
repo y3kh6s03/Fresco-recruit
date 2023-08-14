@@ -4,33 +4,38 @@
 
 .job {
     position: relative;
-    height: 730px;
-    margin-bottom: 100px;
+    height: auto;
+    padding-top: 1350px;
+    margin-bottom: 350px;
 
-    @include mq(sm){
-        margin-bottom: 130px;
+    @include mq(md) {
+        margin-bottom: 400px;
     }
-    @include mq(md){
-        margin-bottom: 130px;
-        height: 780px;
+    @include mq(lg) {
+        margin-bottom: 580px;
     }
-    @include mq(lg){
-        height: 1000px;
+    @include mq(xl) {
+        margin-bottom: 500px;
     }
 
     &::before {
         content: "";
         width: 75vw;
-        height: 90%;
+        height: 150%;
         background-color: $cBlue;
         position: absolute;
-        top: 0;
+        top: -100px;
         left: 0;
         z-index: -99;
 
+        @include mq(lg) {
+            top: -180px;
+            height: 180%;
+            width: 65vw;
+        }
         @include mq(xl) {
             width: 65vw;
-            height: 100%;
+            height: 150%;
         }
     }
 
@@ -44,13 +49,22 @@
         overflow: visible;
         width: 150px;
         position: absolute;
-        top: -10%;
+        top: -35%;
         left: calc(75vw - 75px);
         animation: rotation 18s linear infinite;
 
+        @include mq(md){
+            left: calc(75vw - 75px);
+            top: -40%;
+        }
+        @include mq(lg){
+            width: 200px;
+            left: calc(65vw - 100px);
+            top: -50%;
+        }
         @include mq(xl){
-            left: calc(65vw - 75px);
-            top: -8%;
+            left: calc(65vw - 100px);
+            top: -45%;
         }
 
         &__circle {
@@ -72,43 +86,36 @@
         }
     }
 
-    .section__title {
+    & .section__title {
         @extend .font-md;
-        color: white;
-        padding-top: 50px;
-
-        @include mq(sm) {
-            padding-bottom: 30px;
-        }
-        @include mq(lg) {
-            padding-bottom: 80px;
-        }
+        position: relative;
+        @extend .mb-sm;
 
         &::before {
             content: "Jobs";
             font-size: 60px;
-            line-height: 1;
-            margin: 0;
-            position: absolute;
-            top: -2%;
+            font-weight: bold;
             opacity: .2;
+            color: $cGreen;
+            position: absolute;
+            top: -70%;
+            left: 0;
+            transform: translate(0%, -50%);
 
             @include mq(sm) {
                 font-size: 80px;
             }
-
             @include mq(md) {
                 font-size: 90px;
             }
-
             @include mq(lg) {
                 font-size: 120px;
             }
-
             @include mq(lg) {
                 font-size: 150px;
             }
         }
+
     }
 
     & .job__container{
@@ -127,11 +134,10 @@
     &__card {
         width: 85vw;
         height: 110px;
-        background-image: url(/images/home/ca-creative-QLjeFvxpdxc-unsplash.jpg);
         background-position: center;
         background-size: cover;
         margin-left: 12%;
-        padding-top: 10px;
+        // padding-top: 10px;
         border-radius: 20px 0 0 0;
         position: relative;
         display: flex;
@@ -151,7 +157,6 @@
         }
 
         &:nth-of-type(2) {
-            background-image: url(/images/home/spoon-g7df112c42_1280.jpg);
             border-radius: 0 0 0 0;
 
             @include mq(xl) {
@@ -160,7 +165,6 @@
         }
 
         &:nth-of-type(3) {
-            background-image: url(/images/Jobs/men-3894425_1920.jpg);
             border-radius: 0 0 0 0px;
 
             @include mq(md){
@@ -169,7 +173,6 @@
         }
 
         &:nth-of-type(4) {
-            background-image: url(/images/home/team-gd7bbe42f8_1280.jpg);
             border-radius: 0 0 0 20px;
 
             @include mq(md){
@@ -179,8 +182,6 @@
                 border-radius: 0 0 20px 0;
             }
         }
-
-
 
         &::before {
             content: "";
@@ -194,17 +195,20 @@
             z-index: -00;
         }
 
+
         &__num {
             display: inline-block;
             @extend .font-xl;
             line-height: 1;
             color: white;
+            padding-top: 10px;
             position: relative;
             margin: 0 0 0 30px
         }
 
         &__title {
             z-index: 10;
+            padding-top: 10px;
 
             & span {
                 @extend .font-sm;
@@ -225,32 +229,47 @@
             right: 50px;
             transform: scale(.6);
         }
+
+        &__image{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -5;
+
+            & img{
+                object-fit: cover;
+                object-position: center;
+
+            }
+        }
     }
+
+
+
 
     &__img__left {
         width: 45vw;
         height: 45vw;
         filter: drop-shadow(5px 5px 3px $cBlack);
         position: absolute;
-        bottom: -6%;
+        bottom: -50%;
         left: 0;
 
         @include mq(sm) {
             max-width: 220px;
             max-height: 220px;
-            bottom: -12%;
+            bottom: -55%;
         }
         @include mq(md) {
-            max-width: 280px;
-            max-height: 280px;
-            bottom: -12%;
-            left: 16%;
+            max-width: 270px;
+            max-height: 270px;
+            bottom: -70%;
+            left: 5%;
         }
         @include mq(lg) {
             max-width: 320px;
             max-height: 320px;
-            bottom: -12%;
-            left: 20%;
+            left: 10%;
         }
         @include mq(xl) {
             width: 26vw;
@@ -271,25 +290,22 @@
         height: 25vw;
         filter: drop-shadow(5px 5px 3px $cBlack);
         position: absolute;
-        bottom: 7%;
+        bottom: -30%;
         left: 50%;
 
         @include mq(sm) {
-            width: 23vw;
-            height: 23vw;
-            bottom: 4%;
+            max-width: 160px;
+            max-height: 160px;
+            bottom: -42%;
+            left: 49%;
         }
         @include mq(md) {
-            width: 21vw;
-            max-width: 160px;
-            height: 21vw;
-            max-height: 160px;
-            bottom: 4%;
-            left: 60%;
+            bottom: -40%;
+            left: 48%;
         }
         @include mq(lg) {
-            bottom: 4%;
-            left: 60%;
+            bottom: -45%;
+            left: 45%;
         }
         @include mq(xl) {
             width: 15vw;

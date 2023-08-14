@@ -1,12 +1,12 @@
 import Link from "next/link"
-import "src/app/components/Home/Recruit/Recruit.scss"
+import "src/app/Home/Recruit/Recruit.scss"
 
 export const Recruit = () => {
     return (
         <section className="recruit container">
-            <div className="section__title">
-                <h2>募集要項</h2>
-            </div>
+            <h2 className="section__title">
+                募集要項
+            </h2>
             <Link className="recruit__new" href="#">
                 <div className="recruit__new__content">
                     <h3>

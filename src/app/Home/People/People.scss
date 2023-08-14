@@ -5,38 +5,38 @@
 .people {
     padding-left: 5%;
     position: relative;
-    @extend .mb-lg;
+    @extend .mb-xl;
 
     & .section__title {
-        position: relative;
-        padding-top: 60px;
         @extend .font-md;
+        position: relative;
+        @extend .mb-sm;
 
         &::before {
             content: "People";
             font-size: 60px;
-            color: $cBlue;
-            opacity: .3;
+            font-weight: bold;
+            opacity: .2;
+            color: $cGreen;
             position: absolute;
-            top: -30%;
+            top: -70%;
             left: 0;
+            transform: translate(0%, -50%);
 
             @include mq(sm) {
                 font-size: 80px;
             }
-
             @include mq(md) {
                 font-size: 90px;
             }
-
             @include mq(lg) {
                 font-size: 120px;
             }
-
             @include mq(lg) {
                 font-size: 150px;
             }
         }
+
     }
 
     &__card {

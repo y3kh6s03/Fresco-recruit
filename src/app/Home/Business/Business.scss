@@ -4,9 +4,17 @@
 .business {
     @extend .mb-xl;
 
+    @include mq(lg) {
+        margin-bottom: 350px;
+    }
+    @include mq(xl) {
+        margin-bottom: 450px;
+    }
+
     & .section__title {
         @extend .font-md;
         position: relative;
+        @extend .mb-sm;
 
         &::before {
             content: "Business";

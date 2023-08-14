@@ -1,14 +1,13 @@
-import { Hero } from '@/app/components/Home/Hero/Hero'
-import { Message } from '@/app/components/Home/Message/Message'
-import { Business } from '@/app/components/Home/Business/Business'
-import { Jobs } from '@/app/components/Home/Jobs/Jobs'
-import { People } from '@/app/components/Home/People/Peaople'
-import { Recruit } from '@/app/components/Home/Recruit/Recruit'
 
-// import styles from './page.module.scss'
+import { Hero } from '@/app/Home/Hero/Hero'
+import { Message } from '@/app/Home/Message/Message'
+import { Business } from '@/app/Home/Business/Business'
+import { Jobs } from '@/app/Home/Jobs/Jobs'
+import { People } from '@/app/Home/People/Peaople'
+import { Recruit } from '@/app/Home/Recruit/Recruit'
 
-import peoples from '@/app/components/Home/People/People.json'
-import jobs from '@/app/components/Home/Jobs/Jobs.json'
+import peoples from '@/app/Home/People/People.json'
+import jobs from '@/app/Home/Jobs/Jobs.json'
 
 
 const Home = () => {

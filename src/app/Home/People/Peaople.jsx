@@ -7,7 +7,7 @@ import { Autoplay } from 'swiper/modules';
 
 import Image from "next/image";
 
-import "src/app/components/Home/People/People.scss"
+import "src/app/Home/People/People.scss"
 import 'swiper/css';
 import 'swiper/css/autoplay';
 

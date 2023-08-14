@@ -1,0 +1,26 @@
+[
+    {
+        "num": "1",
+        "jaType": "調理師",
+        "enType": "Professional Chef",
+        "image": "/images/business/chef.jpg"
+    },
+    {
+        "num": "2",
+        "jaType": "栄養士　/　管理栄養士",
+        "enType": "Dietician",
+        "image": "/images/business/dietician2.jpg"
+    },
+    {
+        "num": "3",
+        "jaType": "現場責任者",
+        "enType": "Leader",
+        "image": "/images/business/leader2.jpg"
+    },
+    {
+        "num": "4",
+        "jaType": "管理本部",
+        "enType": "Headquarters",
+        "image": "/images/business/team.jpg"
+    }
+]

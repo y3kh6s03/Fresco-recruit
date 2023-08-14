@@ -1,12 +1,12 @@
 
 import Image from "next/image"
-import "src/app/components/Home/Message/Message.scss"
+import "src/app/Home/Message/Message.scss"
 
 export const Message = () => {
     return (
         <section className="message container">
             <div className="message__top__img">
-                <Image src="/images/home/nasu-kabocha-okura.png" width={250} height={250} alt="message__image"></Image>
+                <Image src="/images/home/bleu-plate.png" width={250} height={250} alt="message__image"></Image>
             </div>
             <h2 className="section__title">
                 Message

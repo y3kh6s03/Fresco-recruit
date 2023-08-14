@@ -4,7 +4,7 @@
 .hero {
     width: 100vw;
     z-index: -1;
-    @extend .mb-lg;
+    @extend .mb-xl;
     position: relative;
 
     &__title {
@@ -117,17 +117,17 @@
             animation: heroSlider 24s linear infinite;
 
             &:nth-child(1) {
-                background-image: url(/images/home/student_hero.jpg);
+                background-image: url(/images/student/student_hero.jpg);
                 animation-delay: -2s;
             }
 
             &:nth-child(2) {
-                background-image: url(/images/home/work_bg.jpg);
+                background-image: url(/images/business/working.jpg);
                 animation-delay: 6s;
             }
 
             &:nth-child(3) {
-                background-image: url(/images/home/luisa-brimble-vIm26fn_QKg-unsplash.jpg);
+                background-image: url(/images/home/meal.jpg);
                 animation-delay: 14s;
             }
         }
@@ -178,7 +178,7 @@
         bottom: -40%;
         left: 0;
         z-index: -10;
-        opacity: .3;
+        opacity: .2;
 
         & img{
             height: 60%;

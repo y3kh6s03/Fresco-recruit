@@ -1,6 +1,6 @@
 import { Button } from "@/app/components/Button/Button";
 import Image from "next/image";
-import "src/app/components/Home/Business/Business.scss";
+import "src/app/Home/Business/Business.scss";
 
 
 export const Business = () => {
@@ -17,7 +17,7 @@ export const Business = () => {
                 <Button></Button>
             </div>
             <div className="business__img__container">
-                <Image src="/images/business/deco_img13.jpg" fill sizes="100%" alt="business-image"></Image>
+                <Image src="/images/business/deco-img.jpg" fill sizes="100%" alt="business-image"></Image>
             </div>
         </section>
     )

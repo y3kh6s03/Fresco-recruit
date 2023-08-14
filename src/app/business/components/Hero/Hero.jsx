@@ -12,7 +12,7 @@ export const Hero = () => {
                 </span>
             </h1>
             <div className="hero__image__container">
-                <Image src="/images/business/work_bg.jpg" fill sizes="100%" alt="hero-image"></Image>
+                <Image src="/images/business/working.jpg" fill sizes="100%" alt="hero-image" loading="eager"></Image>
             </div>
             <div className="hero__contents">
                 <h2 className="hero__contents__headline">

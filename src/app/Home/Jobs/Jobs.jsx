@@ -1,6 +1,6 @@
 import { Button } from "@/app/components/Button/Button";
 import Image from "next/image";
-import "src/app/components/Home/Jobs/Jobs.scss";
+import "src/app/Home/Jobs/Jobs.scss";
 
 export const Jobs = ({ jobs }) => {
     return (
@@ -34,6 +34,9 @@ export const Jobs = ({ jobs }) => {
                                 </h3>
                             </div>
                             <Button></Button>
+                            <div className="job__card__image">
+                                <Image src={job.image} fill sizes="100%" alt="job-image"></Image>
+                            </div>
                         </div>
                     )
                 })}

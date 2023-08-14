@@ -3,17 +3,14 @@
 
 
 .message {
-    margin-bottom: 180px;
+    @extend .mb-xl;
     position: relative;
 
-    @include mq(sm){
-        margin-bottom: 210px;
-    }
-    @include mq(md){
-        margin-bottom: 260px;
-    }
     @include mq(lg){
-        margin-bottom: 320px;
+        margin-bottom: 400px;
+    }
+    @include mq(xl){
+        margin-bottom: 450px;
     }
 
 
@@ -29,30 +26,32 @@
     }
 
     &__top__img {
-        width: 70%;
-        height: 40%;
+        width: 55vw;
+        max-width: 240px;
+        height: 55vw;
         position: absolute;
         top: -8%;
-        right: -14%;
+        right: -10%;
         filter: drop-shadow(5px 5px 5px $cBlack);
         object-fit: cover;
 
         @include mq(sm){
-            width: 70%;
-            height: 50%;
             top: -15%;
         }
         @include mq(md){
-            width: 70%;
-            height: 50%;
-            top: -25%;
-            right: -10%;
+            max-width: 280px;
+            top: -35%;
+            right: -0%;
+        }
+        @include mq(lg){
+            max-width: 330px;
+            top: -70%;
+            right: 0%;
         }
         @include mq(xl){
-            width: 100%;
-            height: 100%;
             top: -65%;
-            right: -30%;
+            top: -80%;
+            right: 10%;
         }
 
         & img{
@@ -124,6 +123,10 @@
             flex: 45;
             color: white;
             padding-bottom: 80px;
+
+            @include mq(xl){
+                padding-bottom: 100px;
+            }
         }
     }
 
@@ -149,7 +152,7 @@
             width: 100vw;
             padding-top: 5px;
             padding-bottom: 5px;
-            background-image: url(/images/home/vegetables-1085063_1280.jpg);
+            background-image: url(/images/home/vegetables.jpg);
             background-size: cover;
             background-position: center;
             position: relative;
