@@ -2,7 +2,7 @@
 @use 'src/app/styles/_common.scss' as *;
 
 .recruit {
-    @extend .mb-xl;
+    @extend .mb-lg;
 
 
     & .section__title {
@@ -11,7 +11,7 @@
         @extend .mb-sm;
 
         &::before {
-            content: "Business";
+            content: "Recruit";
             font-size: 60px;
             font-weight: bold;
             opacity: .2;
