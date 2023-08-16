@@ -1,0 +1,132 @@
+@use 'src/app/styles/_mq.scss' as *;
+@use 'src/app/styles/_common.scss' as *;
+
+
+.contents {
+    padding: 30px 5% 100px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $cOrange;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -99;
+    }
+
+    &__name {
+        @extend .font-xl;
+        color: white;
+    }
+
+    &__jaName {
+        @extend .font-sm;
+        color: white;
+        display: block;
+        padding-left: 85px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 70px;
+            height: 1px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: -10;
+        }
+
+    }
+
+    &__wrapper{
+        @include mq(lg){
+            display: flex;
+            gap: 70px;
+        }
+    }
+
+    &__image {
+        width: 60vw;
+        height: 60vw;
+        position: relative;
+        margin: 0 auto 50px;
+
+
+        @include mq(lg){
+            flex: 5;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            object-position: left;
+
+            @include mq(lg){
+                height: 80% !important;
+            }
+        }
+    }
+
+
+    &__inner{
+        @include mq(lg){
+            flex: 5;
+        }
+    }
+
+    &__text,
+    &__text2 {
+        @extend .mb-md;
+
+        &__headline {
+            color: white;
+            margin-top: 0;
+            @extend .font-md;
+        }
+
+        &__description {
+            color: white;
+            line-height: 1.8;
+        }
+    }
+}
+
+.dietician, .chef{
+    &::before{
+        background-color: transparent;
+    }
+
+    & .contents__name{
+        color: $cBlack;
+    }
+    & .contents__jaName{
+        color: $cBlack;
+
+        &::before{
+            background-color: $cBlack;
+        }
+    }
+    & .contents__text__headline, .contents__text2__headline{
+        color: $cBlack;
+    }
+    & .contents__text__description, .contents__text2__description{
+        color: $cBlack;
+    }
+}
+
+.chef{
+    @extend .mb-md;
+}
+
+.headquarters{
+    &::before{
+        background-color: $cGreen;
+    }
+}
+

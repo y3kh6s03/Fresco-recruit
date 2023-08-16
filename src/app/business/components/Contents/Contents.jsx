@@ -10,7 +10,6 @@ export const Contents = ({ contentItems }) => {
             {
                 contentItems.map((contentItem) => {
                     return (
-                        // <section className="contents container">
                         <section key={contentItem.title} className={`contents container ${contentItem.title.toLowerCase()}`}>
                             <div className="contents__title">
                                 <h2>{contentItem.title}
