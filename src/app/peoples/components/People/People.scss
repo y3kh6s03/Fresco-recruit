@@ -1,0 +1,67 @@
+@use 'src/app/styles/_mq.scss' as *;
+@use 'src/app/styles/_common.scss' as *;
+
+.people {
+    @extend .mb-xl;
+
+    &__image__container {
+        width: 100vw;
+        height: 300px;
+        position: relative;
+        margin-left: calc(50% - 30vw);
+
+        & img {
+            border-radius: 20px 0 0 20px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__headline__inner {
+        width: 60vw;
+        padding: 3% 5% 5%;
+        margin-top: -10%;
+        position: relative;
+        z-index: 10;
+        @extend .mb-md;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: $cOrange;
+            border-radius: 20px;
+            opacity: .8;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -99;
+
+        }
+
+        & h3 {
+            color: white;
+            @extend .font-md;
+        }
+
+        & p {
+            color: white;
+        }
+    }
+
+    &__contents {
+        &__question {
+            @extend .font-sm;
+            line-height: 1.6;
+        }
+
+        &__answer {
+
+            &:nth-of-type(1) {
+                @extend .mb-md;
+                line-height: 1.6;
+            }
+        }
+    }
+
+}
