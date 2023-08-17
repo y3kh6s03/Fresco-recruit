@@ -19,7 +19,7 @@ export const People = ({ peopleItems }) => {
                                 <p>{peopleItem.department}</p>
                                 <p>{peopleItem.since}</p>
                             </div>
-                            <div className="people__coÍntents">
+                            <div className="people__contents">
                                 <h4 className="people__contents__question">
                                     {peopleItem.interview1}
                                 </h4>

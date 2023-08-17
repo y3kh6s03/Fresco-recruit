@@ -10,6 +10,17 @@
         position: relative;
         margin-left: calc(50% - 30vw);
 
+        @include mq(lg){
+            width: 70vw;
+            height: 400px;
+            margin-left: calc(50% - 20vw);
+        }
+        @include mq(xl){
+            width: 80vw;
+            height: 450px;
+            margin-left: calc(50% - 20vw);
+        }
+
         & img {
             border-radius: 20px 0 0 20px;
             object-fit: cover;
@@ -24,6 +35,15 @@
         position: relative;
         z-index: 10;
         @extend .mb-md;
+
+        @include mq(lg){
+            width: 45vw;
+        }
+        @include mq(lg){
+            width: 35vw;
+        }
+
+
 
         &::before {
             content: "";
@@ -50,9 +70,21 @@
     }
 
     &__contents {
+        @include mq(lg){
+            width: 75vw;
+        }
+        @include mq(xl){
+            width: 50vw;
+            margin-left: 45%
+        }
+
         &__question {
             @extend .font-sm;
             line-height: 1.6;
+
+            @include mq(xl){
+                font-size: 20px;
+            }
         }
 
         &__answer {

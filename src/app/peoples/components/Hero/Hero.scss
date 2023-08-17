@@ -73,7 +73,8 @@
             line-height: 1.6;
 
             @include mq(xl){
-                padding-right: 100px;
+                width: 90%;
+                padding-top: 300px;
             }
         }
     }
@@ -92,6 +93,11 @@
         left: 0;
         transform: translate(30%, 50%);
         z-index: -99;
+
+        @include mq(lg){
+            width: 70%;
+            transform: translate(60%, 50%);
+        }
     }
 
     & .circleText {
@@ -102,21 +108,10 @@
         top: 50%;
         left: 50%;
 
+        @include mq(lg){
+            width: 550px;
+        }
 
-
-        // @include mq(md){
-        //     left: calc(75vw - 75px);
-        //     top: -40%;
-        // }
-        // @include mq(lg){
-        //     width: 200px;
-        //     // left: calc(65vw - 100px);
-        //     top: -50%;
-        // }
-        // @include mq(xl){
-        //     // left: calc(65vw - 100px);
-        //     // top: -45%;
-        // }
 
         &__circle {
             fill: none;
