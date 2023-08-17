@@ -8,7 +8,7 @@ export const People = ({ peopleItems }) => {
             {
                 peopleItems.map((peopleItem) => {
                     return (
-                        <section className="people container">
+                        <section key={peopleItem.department}className="people container">
                             <div className="people__image__container">
                                 <Image src={peopleItem.image} fill sizes="100%" alt="person1-image"></Image>
                             </div>
