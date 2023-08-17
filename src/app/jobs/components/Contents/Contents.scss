@@ -51,7 +51,9 @@
 
     &__image {
         width: 60vw;
+        max-width: 550px;
         height: 60vw;
+        max-height: 500px;
         position: relative;
         margin: 0 auto 50px;
 
@@ -97,6 +99,10 @@
     }
 }
 
+////////////////////////////////////
+/// Dietician     Chef
+////////////////////////////////////
+
 .dietician, .chef{
     &::before{
         background-color: transparent;
@@ -120,9 +126,18 @@
     }
 }
 
+////////////////////////////////////
+///Chef
+////////////////////////////////////
+
 .chef{
     @extend .mb-md;
 }
+
+
+////////////////////////////////////
+///Headquarter
+////////////////////////////////////
 
 .headquarters{
     &::before{
