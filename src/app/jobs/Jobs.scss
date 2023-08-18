@@ -2,7 +2,7 @@
 @use 'src/app/styles/_common.scss' as *;
 
 
-.contents {
+.jobs {
     padding: 30px 5% 100px;
     position: relative;
 
@@ -108,20 +108,20 @@
         background-color: transparent;
     }
 
-    & .contents__name{
+    & .jobs__name{
         color: $cBlack;
     }
-    & .contents__jaName{
+    & .jobs__jaName{
         color: $cBlack;
 
         &::before{
             background-color: $cBlack;
         }
     }
-    & .contents__text__headline, .contents__text2__headline{
+    & .jobs__text__headline, .jobs__text2__headline{
         color: $cBlack;
     }
-    & .contents__text__description, .contents__text2__description{
+    & .jobs__text__description, .jobs__text2__description{
         color: $cBlack;
     }
 }

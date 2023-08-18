@@ -1,19 +1,20 @@
-import { Contents } from "@/app/jobs/components/Contents/Contents";
-import { Hero } from "@/app/jobs/components/Hero/Hero";
+import { Jobs } from "src/app/jobs/Jobs.jsx";
+import { Hero } from "@/app/components/Hero/Hero.jsx";
 import { Recruit } from "@/app/Home/Recruit/Recruit";
 
 import jobItems from "src/app/jobs/Jobs.json";
+import {jobsHero} from "src/app/components/Hero/HeroItems.js";
 
 
 
-const Jobs = () => {
+const Home = () => {
     return (
         <>
-            <Hero />
-            <Contents jobItems={jobItems}/>
+            <Hero heroItem={jobsHero}/>
+            <Jobs jobItems={jobItems}/>
             <Recruit/>
         </>
     )
 }
 
-export default Jobs;
+export default Home;
