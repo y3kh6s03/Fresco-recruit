@@ -1,7 +1,7 @@
 @use 'src/app/styles/_mq.scss' as *;
 @use 'src/app/styles/_common.scss' as *;
 
-.contents {
+.business {
     position: relative;
     @extend .mb-xl;
 
@@ -122,7 +122,7 @@
 /////////////////////////////////////
 
 .kyushoku {
-    & .contents__subimage__container {
+    & .business__subimage__container {
         top: 38%;
         right: 0;
         z-index: 1;
@@ -140,7 +140,7 @@
         }
     }
 
-    & .contents__image__container {
+    & .business__image__container {
         @extend .mb-lg;
     }
 }
@@ -151,7 +151,7 @@
 
 .support {
 
-    & .contents__title{
+    & .business__title{
 
         @include mq(sm){
             padding-left: 15%;
@@ -167,7 +167,7 @@
         border-radius: 20px 0 0 20px;
     }
 
-    & .contents__image__container {
+    & .business__image__container {
         width: 60vw;
         height: 200px;
         margin-left: auto;
@@ -183,7 +183,7 @@
         }
     }
 
-    & .contents__subimage__container {
+    & .business__subimage__container {
         width: 30vw;
         height: 220px;
         top: 260px;
@@ -205,7 +205,7 @@
         }
     }
 
-    & .contents__text {
+    & .business__text {
         margin-left: calc(50% - 18vw);
     }
 }
@@ -220,11 +220,11 @@
     margin-bottom: 350px;
 
 
-    .contents__image__container {
+    .business__image__container {
         @extend .mb-md;
     }
 
-    & .contents__subimage__container {
+    & .business__subimage__container {
         bottom: -180px;
         right: 0;
 
@@ -256,7 +256,7 @@
         border-radius: 20px 0 0 20px;
     }
 
-    & .contents__title{
+    & .business__title{
 
         @include mq(sm){
             padding-left: 15%;
@@ -266,7 +266,7 @@
         }
     }
 
-    & .contents__image__container {
+    & .business__image__container {
         width: 60vw;
         height: 200px;
         margin-left: auto;
@@ -281,7 +281,7 @@
         }
     }
 
-    & .contents__subimage__container {
+    & .business__subimage__container {
         width: 50vw;
         height: 120px;
         top: 350px;
@@ -308,7 +308,7 @@
         }
     }
 
-    & .contents__text {
+    & .business__text {
         margin-left: calc(50% - 18vw);
 
     }

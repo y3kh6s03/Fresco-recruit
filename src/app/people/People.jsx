@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import "@/app/peoples/components/People/People.scss"
+import "src/app/people/People.scss";
 
 export const People = ({ peopleItems }) => {
     return (
