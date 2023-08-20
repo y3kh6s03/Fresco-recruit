@@ -1,0 +1,42 @@
+@use 'src/app/styles/_common.scss' as *;
+@use 'src/app/styles/_mq.scss' as *;
+
+
+.recruit{
+    @extend .content-container;
+    &__title{
+        @extend .font-md;
+        @extend .mb-md;
+    }
+    &__table{
+        padding-right: 5%;
+        &__tr{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            @extend .mb-sm;
+        }
+        &__th{
+            position: relative;
+            line-height: 3;
+            &::before{
+                display: inline-block;
+                content: '';
+                width: 85vw;
+                height: .3px;
+                background-color: $cBlack;
+                position: absolute;
+                bottom: 10%;
+
+                @include mq(lg){
+                    width: 70vw;
+                }
+            }
+        }
+        &__td{
+            line-height: 1.8;
+        }
+    }
+}
+
+
