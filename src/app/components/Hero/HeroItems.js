@@ -20,9 +20,9 @@ export const peopleHero = {
     description: "フレスコ・カンパニーで働くメンバーの仕事内容や想い、社員それぞれのまっすぐな思いを、ぜひ見てみてください。"
 }
 export const recruitHero = {
-    title: "Business",
-    jaTitle: "フレスコ・カンパニーの事業",
-    image: "/images/business/working.jpg",
-    headline: "事業展開の展望ヘッドライン",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellendus ea cum nesciunt voluptatum impedit laborum harum voluptate dolor placeat est recusandae earum praesentium, voluptates rem nemo sint? Id, explicabo."
+    title: "Recruit",
+    jaTitle: "求人情報",
+    image: "/images/student/student_hero.jpg",
+    headline: "温かな心と専門知識を持つプロへ",
+    description: "従業員の健康と幸福感を大切にしています。福祉施設での勤務における重要な支援体制を整え、仕事とプライベートの両立をサポートします。また、研修制度やキャリアパスの機会も豊富に提供し、あなたのスキルアップと成長を応援します。"
 }
