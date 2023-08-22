@@ -1,31 +1,31 @@
 [
     {
-        "href": "#",
+        "href": "/",
         "enPageName": "Home",
         "jaPageName": "ホーム"
     },
     {
-        "href": "#",
+        "href": "/business",
         "enPageName": "Business",
         "jaPageName": "事業について"
     },
     {
-        "href": "#",
+        "href": "/jobs",
         "enPageName": "Jobs",
         "jaPageName": "仕事について"
     },
     {
-        "href": "#",
+        "href": "/people",
         "enPageName": "People",
         "jaPageName": "フレスコの人"
     },
     {
-        "href": "#",
+        "href": "/recruit",
         "enPageName": "Recruit",
         "jaPageName": "求人情報"
     },
     {
-        "href": "#",
+        "href": "/contact",
         "enPageName": "Contact",
         "jaPageName": "お問い合わせ"
     }

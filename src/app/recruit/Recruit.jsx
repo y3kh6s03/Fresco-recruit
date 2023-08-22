@@ -3,7 +3,7 @@ import "src/app/recruit/Recruit.scss";
 export const Recruit = () => {
     return (
         <section className="recruit">
-            <h2 className="recruit__title">
+            <h2 className="recruit__title" id="new">
                 新卒採用<br />募集要項
             </h2>
 

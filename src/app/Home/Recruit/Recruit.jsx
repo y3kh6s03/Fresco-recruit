@@ -7,7 +7,7 @@ export const Recruit = () => {
             <h2 className="section__title">
                 募集要項
             </h2>
-            <Link className="recruit__new" href="#">
+            <Link className="recruit__new" href="/recruit#new">
                 <div className="recruit__new__content">
                     <h3>
                         New graduate
@@ -21,7 +21,7 @@ export const Recruit = () => {
                     <span></span>
                 </div>
             </Link>
-            <Link className="recruit__new" href="#">
+            <Link className="recruit__new" href="/recruit">
                 <div className="recruit__new__content">
                     <h3>
                         Mid-career

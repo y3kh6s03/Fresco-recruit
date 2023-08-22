@@ -9,6 +9,7 @@
         @extend .font-xl;
     }
     &__page__jatitle {
+        @extend .font-md;
         display: block;
     }
 

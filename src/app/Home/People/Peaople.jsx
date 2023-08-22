@@ -10,6 +10,7 @@ import Image from "next/image";
 import "src/app/Home/People/People.scss"
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import Link from 'next/link';
 
 
 export const People = ({ peoples }) => {
@@ -36,37 +37,39 @@ export const People = ({ peoples }) => {
 
                     breakpoints={{
                         600: {
-                          width: 600,
-                          slidesPerView: 1.3,
+                            width: 600,
+                            slidesPerView: 1.3,
                         },
                         960: {
-                          width: 960,
-                          slidesPerView: 1.3,
+                            width: 960,
+                            slidesPerView: 1.3,
                         },
                         1280: {
-                          width: 1280,
-                          slidesPerView: 1.7,
+                            width: 1280,
+                            slidesPerView: 1.7,
                         },
-                      }}
+                    }}
                 >
                     {
                         peoples.map((people) => {
                             return (
                                 <SwiperSlide key={people.image}>
                                     <div className="people__card">
-                                        <Image src={people.image} fill sizes="100%" alt={people.num}></Image>
-                                        <div className="people__card__num">
-                                            <span>{people.num}</span>
-                                        </div>
-                                        <div className="people__card__contents">
-                                            <h3>
-                                                {people.headline}
-                                            </h3>
-                                            <p>
-                                                担当部署 : {people.position} <br />
-                                                担当業務 : {people.job}
-                                            </p>
-                                        </div>
+                                        <Link href={people.href}>
+                                            <Image src={people.image} fill sizes="100%" alt={people.num}></Image>
+                                            <div className="people__card__num">
+                                                <span>{people.num}</span>
+                                            </div>
+                                            <div className="people__card__contents">
+                                                <h3>
+                                                    {people.headline}
+                                                </h3>
+                                                <p>
+                                                    担当部署 : {people.position} <br />
+                                                    担当業務 : {people.job}
+                                                </p>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </SwiperSlide>
                             )
