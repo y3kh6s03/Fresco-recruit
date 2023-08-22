@@ -5,11 +5,10 @@
 .job {
     position: relative;
     height: auto;
-    padding-top: 1350px;
-    margin-bottom: 350px;
+    margin-bottom: 450px;
 
     @include mq(md) {
-        margin-bottom: 400px;
+        margin-bottom: 500px;
     }
     @include mq(lg) {
         margin-bottom: 580px;
@@ -133,11 +132,10 @@
 
     &__card {
         width: 85vw;
-        height: 110px;
+        height: 150px;
         background-position: center;
         background-size: cover;
         margin-left: 12%;
-        // padding-top: 10px;
         border-radius: 20px 0 0 0;
         position: relative;
         display: flex;

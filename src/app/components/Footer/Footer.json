@@ -2,41 +2,85 @@
     {
         "title": "Business",
         "jaTitle": "事業について",
+        "mainLink": "/business",
         "types": [
-            "給食受託事業",
-            "直営給食サポート事業",
-            "ケータリング事業",
-            "フローズンヨーグルト事業",
-            "飲食・栄養管理サポート事業"
+            {
+                "name": "給食受託事業",
+                "url": "/business#kyushoku"
+            },
+            {
+                "name": "直営給食サポート事業",
+                "url": "/business#support"
+            },
+            {
+                "name": "ケータリング事業",
+                "url": "/business#catering"
+            },
+            {
+                "name": "フローズンヨーグルト事業",
+                "url": "/business#frozen"
+            }
         ]
     },
     {
         "title": "Jobs",
         "jaTitle": "仕事について",
+        "mainLink": "/jobs",
         "types": [
-            "現場責任者",
-            "栄養士 / 管理栄養士",
-            "調理師",
-            "管理本部"
+            {
+                "name": "現場責任者",
+                "url": "/jobs#leader"
+            },
+            {
+                "name": "栄養士 / 管理栄養士",
+                "url": "/jobs#dietician"
+            },
+            {
+                "name": "調理師",
+                "url": "/jobs#chef"
+            },
+            {
+                "name": "管理本部",
+                "url": "/jobs#headquarters"
+            }
         ]
     },
     {
         "title": "People",
         "jaTitle": "フレスコ＿カンパニーの人",
+        "mainLink": "/people",
         "types": [
-            "01",
-            "02",
-            "03",
-            "04",
-            "05"
+            {
+                "name": "01",
+                "url": "/people#leader"
+            },
+            {
+                "name": "02",
+                "url": "/people#chef"
+            },
+            {
+                "name": "03",
+                "url": "/people#dietician"
+            },
+            {
+                "name": "04",
+                "url": "/people#headquaters"
+            }
         ]
     },
     {
         "title": "Recruit",
         "jaTitle": "採用情報",
+        "mainLink": "/recruit",
         "types": [
-            "新卒採用",
-            "中途採用"
+            {
+                "name": "新卒採用",
+                "url": "/recruit#new"
+            },
+            {
+                "name": "中途採用",
+                "url": "/recruit"
+            }
         ]
     }
 ]

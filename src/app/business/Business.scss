@@ -8,7 +8,7 @@
     &::before {
         content: "";
         width: 95vw;
-        height: calc(100% + 50px);
+        height: calc(100% + 90px);
         background-color: $cBlue;
         border-radius: 0 20px 20px 0;
         position: absolute;
@@ -101,6 +101,10 @@
     &__text {
         width: 65vw;
 
+        @include mq(xl){
+            width: 50vw;
+        }
+
         &__headline {
             @extend .font-lg;
             color: white;
@@ -109,7 +113,7 @@
         }
 
         &__description {
-            @extend .font-md;
+            @extend .font-sm;
             line-height: 1.8;
             color: white;
         }
@@ -206,7 +210,11 @@
     }
 
     & .business__text {
-        margin-left: calc(50% - 18vw);
+        margin-left: calc(50% - 19vw);
+
+        @include mq(xl){
+            margin-left: calc(50% - 10vw);
+        }
     }
 }
 

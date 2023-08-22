@@ -20,8 +20,10 @@ export const NavBar = ({ navbarItems }) => {
             <div className="pc__header">
                 <nav className="pc__nav">
                     <div className="pc__nav__title">
-                        <Image src="/images/fresco_logo.png" width='250' height='35' alt="header-logo" priority></Image>
-                        <h2>2024 Recruit Site</h2>
+                        <Link href="/">
+                            <Image src="/images/fresco_logo.png" width='250' height='35' alt="header-logo" priority></Image>
+                            <h2>2025 Recruit Site</h2>
+                        </Link>
                     </div>
                     <ul className="pc__nav__ul">
                         {
@@ -42,8 +44,10 @@ export const NavBar = ({ navbarItems }) => {
             <div className="mobile__header">
                 <nav className={`mobile__nav ${menuClass ? 'mobile__nav__show' : ''}`}>
                     <div className="mobile__nav__title">
-                        <Image src="/images/fresco_logo.png" width='150' height='30' alt="mobile-logo"></Image>
-                        <h2>2025 Recruit Site</h2>
+                        <Link href="/">
+                            <Image src="/images/fresco_logo.png" width='150' height='30' alt="mobile-logo"></Image>
+                            <h2>2025 Recruit Site</h2>
+                        </Link>
                     </div>
 
                     <div className="mobile__menu__icon" onClick={onMenuOpen}>

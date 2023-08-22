@@ -1,6 +1,8 @@
 import { Button } from "@/app/components/Button/Button";
 import Image from "next/image";
+import Link from "next/link";
 import "src/app/Home/Jobs/Jobs.scss";
+
 
 export const Jobs = ({ jobs }) => {
     return (
@@ -21,23 +23,25 @@ export const Jobs = ({ jobs }) => {
             <div className="job__container">
                 {jobs.map((job) => {
                     return (
-                        <div key={job.num} className="job__card">
-                            <span className="job__card__num">
-                                {job.num}
-                            </span>
-                            <div className="job__card__title">
-                                <span>
-                                    {job.jaType}
+                        <>
+                            <Link href={job.name} key={job.num} className="job__card">
+                                <span className="job__card__num">
+                                    {job.num}
                                 </span>
-                                <h3>
-                                    {job.enType}
-                                </h3>
-                            </div>
-                            <Button></Button>
-                            <div className="job__card__image">
-                                <Image src={job.image} fill sizes="100%" alt="job-image"></Image>
-                            </div>
-                        </div>
+                                <div className="job__card__title">
+                                    <span>
+                                        {job.jaType}
+                                    </span>
+                                    <h3>
+                                        {job.enType}
+                                    </h3>
+                                </div>
+                                <Button></Button>
+                                <div className="job__card__image">
+                                    <Image src={job.image} fill sizes="100%" alt="job-image"></Image>
+                                </div>
+                            </Link>
+                        </>
                     )
                 })}
             </div>

@@ -19,11 +19,12 @@
 
     &__name {
         @extend .font-xl;
+        line-height: 1.3;
         color: white;
     }
 
     &__jaName {
-        @extend .font-sm;
+        @extend .font-md;
         color: white;
         display: block;
         padding-left: 85px;

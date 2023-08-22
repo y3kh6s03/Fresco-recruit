@@ -27,23 +27,25 @@ export const Footer = ({ footerItems }) => {
                         return (
                             <ul key={i}
                                 className="nav__ul"
-                                onClick={() => footerToggle(i)}>
+                                onMouseEnter={() => footerToggle(i)}>
                                 <li className="nav__ul__item">
-                                    <div>
-                                        <p>
-                                            {footerItem.title}
-                                        </p>
-                                        <span>
-                                            {footerItem.jaTitle}
-                                        </span>
-                                    </div>
+                                    <Link href={footerItem.mainLink}>
+                                        <div>
+                                            <p>
+                                                {footerItem.title}
+                                            </p>
+                                            <span>
+                                                {footerItem.jaTitle}
+                                            </span>
+                                        </div>
+                                    </Link>
                                     {
                                         footerItem.types.map((type) => {
                                             return (
-                                                <ul key={type}
+                                                <ul key={type.name}
                                                     className={selected === i ? "open" : ""}>
                                                     <li>
-                                                        <Link href="#">{type}</Link>
+                                                        <Link href={type.url}>{type.name}</Link>
                                                     </li>
                                                 </ul>
                                             )

@@ -1,6 +1,7 @@
 [
     {
         "num": "01",
+        "href": "/people#leader",
         "headline": "ヘッドラインメッセージ",
         "position": "担当部署",
         "job": "担当業務",
@@ -8,6 +9,7 @@
     },
     {
         "num": "02",
+        "href": "/people#dietician",
         "headline": "ヘッドラインメッセージ",
         "position": "担当部署",
         "job": "担当業務",
@@ -15,6 +17,7 @@
     },
     {
         "num": "03",
+        "href": "/people#chef",
         "headline": "ヘッドラインメッセージ",
         "position": "担当部署",
         "job": "担当業務",
@@ -22,6 +25,7 @@
     },
     {
         "num": "04",
+        "href": "/people#headquaters",
         "headline": "ヘッドラインメッセージ",
         "position": "担当部署",
         "job": "担当業務",

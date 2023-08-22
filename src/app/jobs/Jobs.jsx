@@ -9,13 +9,14 @@ export const Jobs = ({ jobItems }) => {
             {
                 jobItems.map((jobItem) => {
                     return (
-                        <section key={jobItems.name} className={`jobs ${jobItem.name.toLowerCase()}`}>
+                        <section key={jobItems.name} className={`jobs ${jobItem.name.toLowerCase()}`} id={jobItem.name.toLowerCase()}>
                             <h3 className="jobs__name">
                                 {jobItem.name}
                                 <span className="jobs__jaName">
                                     {jobItem.jaName}
                                 </span>
                             </h3>
+
                             <div className="jobs__wrapper">
                                 <div className="jobs__image">
                                     <Image src={jobItem.image} fill sizes="100%" alt="jobs-image"></Image>
