@@ -13,7 +13,7 @@ export const Hero = ({ heroItem }) => {
             </h1>
             <div className="hero__inner">
                 <div className="hero__image__container">
-                    <Image src={heroItem.image} fill sizes="100%" alt="hero-image" loading="eager"></Image>
+                    <Image src={heroItem.image} fill sizes="100%" alt="hero-image" loading="eager" priority></Image>
                 </div>
                 <div className="hero__contents">
                     <h2 className="hero__contents__headline">

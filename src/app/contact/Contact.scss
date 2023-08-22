@@ -1,0 +1,47 @@
+@use "src/app/styles/_mq.scss" as *;
+@use "src/app/styles/_common.scss" as *;
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    @extend .mb-md;
+
+
+    &__inner {
+        margin-bottom: 20px;
+
+    }
+
+    &__label {
+        @extend .font-sm;
+        font-weight: bold;
+        & span {}
+    }
+
+    &__input {
+        width: 90vw;
+        height: 40px;
+        padding: 3%;
+        border-radius: 10px;
+        border-style: none;
+    }
+
+    & .submit__button{
+        width: 100px;
+        height: 40px;
+        margin: 0 auto;
+        border-radius: 10px;
+        color: white;
+        background-color: $cBlue;
+        border-style: none;
+        transition: all .3s;
+
+        &:hover{
+            background-color: white;
+            color: $cBlack;
+        }
+
+
+    }
+}
