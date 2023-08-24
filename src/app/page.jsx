@@ -1,4 +1,3 @@
-
 import { Hero } from '@/app/Home/Hero/Hero'
 import { Message } from '@/app/Home/Message/Message'
 import { Business } from '@/app/Home/Business/Business'

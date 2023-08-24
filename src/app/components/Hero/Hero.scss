@@ -4,18 +4,22 @@
 
 .hero {
     margin-top: 150px;
-    @extend .mb-lg;
 
     &__page__title {
+        padding-left: 5%;
         @extend .font-xl;
+        line-height: 1.3;
     }
+
     &__page__jatitle {
         @extend .font-md;
         display: block;
     }
 
-    &__inner{
-        @include mq(xl){
+    &__inner {
+        padding: 0 5%;
+        @extend .mb-lg;
+        @include mq(xl) {
             display: flex;
             flex-direction: row-reverse;
             gap: 30px;
@@ -27,14 +31,16 @@
         height: 300px;
         position: relative;
 
-        @include mq(sm){
+        @include mq(sm) {
             margin-bottom: 80px;
         }
-        @include mq(lg){
+
+        @include mq(lg) {
             margin-bottom: 120px;
             height: 400px;
         }
-        @include mq(xl){
+
+        @include mq(xl) {
             flex: 5;
             max-width: 750px;
             height: 700px;
@@ -51,10 +57,11 @@
             object-fit: cover;
             object-position: center;
 
-            @include mq(lg){
+            @include mq(lg) {
                 width: 80% !important;
             }
-            @include mq(xl){
+
+            @include mq(xl) {
                 width: 100% !important;
                 right: -5%;
                 object-position: left;
@@ -63,7 +70,7 @@
     }
 
     &__contents {
-        @include mq(xl){
+        @include mq(xl) {
             flex: 5;
         }
 
@@ -72,20 +79,19 @@
             width: 80%;
             color: $cGreen;
 
-            @include mq(xl){
+            @include mq(xl) {
                 width: 100%;
                 padding-right: 100px;
             }
         }
+
         & p {
             @extend .font-md;
             line-height: 1.6;
 
-            @include mq(xl){
+            @include mq(xl) {
                 padding-right: 100px;
             }
         }
     }
-
-
 }

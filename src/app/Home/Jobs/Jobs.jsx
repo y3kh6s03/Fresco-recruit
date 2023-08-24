@@ -1,7 +1,9 @@
+
 import { Button } from "@/app/components/Button/Button";
 import Image from "next/image";
 import Link from "next/link";
 import "src/app/Home/Jobs/Jobs.scss";
+
 
 
 export const Jobs = ({ jobs }) => {
@@ -46,7 +48,11 @@ export const Jobs = ({ jobs }) => {
                 })}
             </div>
             <div className="job__img__left">
-                <Image src="/images/home/salad.png" fill sizes="100%" alt="job__img"></Image>
+                <Image
+                    src="/images/home/salad.png"
+                    fill
+                    sizes="100%"
+                    alt="job__img"></Image>
             </div>
             <div className="job__img__right">
                 <Image src="/images/home/pumpkin.png" fill sizes="100%" alt="job__img"></Image>
