@@ -1,10 +1,12 @@
+
+
 import Image from "next/image";
 import "src/app/components/Hero/Hero.scss";
 
 
 export const Hero = ({ heroItem }) => {
     return (
-        <div className="hero container">
+        <div className="hero">
             <h1 className="hero__page__title">
                 {heroItem.title}
                 <span className="hero__page__jatitle">

@@ -4,12 +4,16 @@ import Image from "next/image"
 import Link from "next/link"
 import "src/app/components/Navbar/Navbar.scss"
 import { useState } from "react"
+import { motion } from "framer-motion"
+import { usePathname } from "next/navigation"
 
 
 
 export const NavBar = ({ navbarItems }) => {
 
     const [menuClass, setMenuClass] = useState(false);
+
+    const path = usePathname();
 
     const onMenuOpen = () => {
         setMenuClass((prev) => !prev);
@@ -29,12 +33,12 @@ export const NavBar = ({ navbarItems }) => {
                         {
                             navbarItems.map((navbarItem) => {
                                 return (
-                                    <li key={navbarItem.enPageName} className="pc__nav__li">
+                                    <motion.li key={navbarItem.enPageName} className={`${navbarItem.href === path ? "pc__nav__li select__pc__nav__li" : "pc__nav__li"}`} whileHover={{scale: 1.1}}>
                                         <Link href={navbarItem.href}>
                                             {navbarItem.enPageName}<br />
                                             <span>{navbarItem.jaPageName}</span>
                                         </Link>
-                                    </li>
+                                    </motion.li>
                                 )
                             })
                         }
@@ -62,12 +66,12 @@ export const NavBar = ({ navbarItems }) => {
                         {
                             navbarItems.map((navbarItem) => {
                                 return (
-                                    <li key={navbarItem.enPageName} className="mobile__nav__li">
-                                        <Link href={navbarItem.href}>
+                                    <motion.li key={navbarItem.enPageName} className={`${navbarItem.href === path ? "mobile__nav__li select__mobile__nav__li" : "mobile__nav__li"}`} whileHover={{scale: 1.1}}>
+                                        <Link href={navbarItem.href} >
                                             {navbarItem.enPageName}<br />
                                             <span>{navbarItem.jaPageName}</span>
                                         </Link>
-                                    </li>
+                                    </motion.li>
                                 )
                             })
                         }

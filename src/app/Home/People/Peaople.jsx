@@ -56,7 +56,9 @@ export const People = ({ peoples }) => {
                                 <SwiperSlide key={people.image}>
                                     <div className="people__card">
                                         <Link href={people.href}>
-                                            <Image src={people.image} fill sizes="100%" alt={people.num}></Image>
+                                            <div className="people__card__image">
+                                                <Image src={people.image} fill sizes="100%" alt={people.num}></Image>
+                                            </div>
                                             <div className="people__card__num">
                                                 <span>{people.num}</span>
                                             </div>

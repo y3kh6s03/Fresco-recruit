@@ -39,6 +39,7 @@
                 @extend .font-sm;
                 margin: 0;
                 line-height: 1.5;
+                text-align: center;
             }
         }
 
@@ -105,6 +106,7 @@
                 @extend .font-sm;
                 margin: 0;
                 line-height: 1;
+                text-align: center;
             }
         }
 
@@ -303,5 +305,17 @@
                 }
             }
         }
+    }
+}
+
+.select__pc__nav__li,
+.select__mobile__nav__li{
+    & a{
+        font-weight: bold;
+        color: $cOrange;
+    }
+
+    & span{
+        color:  $cOrange;
     }
 }
