@@ -1,7 +1,7 @@
 @use "src/app/styles/_mq.scss" as *;
 @use "src/app/styles/_common.scss" as *;
 
-.business {
+.home__business {
     @extend .mb-xl;
 
     @include mq(lg) {

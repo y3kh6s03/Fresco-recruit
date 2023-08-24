@@ -1,9 +1,29 @@
 "use client"
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { usePathname } from "next/navigation"
+import { useEffect } from 'react';
+
+import Lenis from "@studio-freight/lenis"
+
 
 const MotionWrapper = ({ children }) => {
+
+    useEffect(() => {
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+    }, [])
 
     const pathName = usePathname()
 

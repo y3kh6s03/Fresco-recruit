@@ -10,6 +10,7 @@ import jobs from '@/app/Home/Jobs/Jobs.json'
 
 
 const Home = () => {
+
   return (
     <main>
       <Hero></Hero>

@@ -61,6 +61,7 @@
         @extend .mb-lg;
         position: relative;
 
+
         @include mq(sm){
             width: 80vw;
             height: 230px;
@@ -78,6 +79,8 @@
             object-fit: cover;
             object-position: center;
             border-radius: 0 20px 20px 0;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+
         }
     }
 
@@ -87,6 +90,7 @@
         position: absolute;
         z-index: -9;
 
+
         @include mq(lg){
             width: 35vw;
             height: 300px;
@@ -95,11 +99,14 @@
         & img {
             object-fit: cover;
             border-radius: 20px 0 0 20px;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
         }
     }
 
     &__text {
         width: 65vw;
+        position: relative;
+        z-index: 100;
 
         @include mq(xl){
             width: 50vw;
@@ -127,7 +134,7 @@
 
 .kyushoku {
     & .business__subimage__container {
-        top: 38%;
+        top: -5%;
         right: 0;
         z-index: 1;
 
@@ -145,6 +152,7 @@
     }
 
     & .business__image__container {
+        top: -50px;
         @extend .mb-lg;
     }
 }
@@ -176,10 +184,15 @@
         height: 200px;
         margin-left: auto;
         margin-right: calc(50% - 50vw);
+        top: -200px;
 
         @include mq(lg){
             width: 60vw;
             height: 350px;
+        }
+        @include mq(xl){
+            position: relative;
+            top: -200px;
         }
 
         & img {
@@ -190,14 +203,17 @@
     & .business__subimage__container {
         width: 30vw;
         height: 220px;
-        top: 260px;
+        top: -400px;
         right: auto;
-        left: 0;
+        left: -10px;
 
         @include mq(lg){
             width: 30vw;
             height: 400px;
-            top: 400px;
+            top: 0px;
+        }
+        @include mq(xl){
+            top: -200px;
         }
 
         & img {
@@ -228,13 +244,23 @@
     margin-bottom: 350px;
 
 
-    .business__image__container {
+    & .business__image__container {
         @extend .mb-md;
+        top: -350px;
+
+        @include mq(xl){
+            position: relative;
+            top: -400px;
+        }
     }
 
     & .business__subimage__container {
-        bottom: -180px;
+        top: -600px;
         right: 0;
+
+        @include mq(xl){
+            top: -450px;
+        }
 
         &::before{
             content: "";
@@ -279,20 +305,30 @@
         height: 200px;
         margin-left: auto;
         margin-right: calc(50% - 50vw);
+        top: -450px;
 
         @include mq(lg){
-            height: 350px;
+            height: 380px;
+        }
+        @include mq(xl){
+            margin-right: calc(50% - 40vw);
+            position: relative;
+            top: -450px;
         }
 
         & img {
             border-radius: 20px 0 0 20px;
+            @include mq(xl){
+            border-radius: 20px;
+            }
+
         }
     }
 
     & .business__subimage__container {
         width: 50vw;
         height: 120px;
-        top: 350px;
+        top: -1000px;
         right: auto;
         left: 0;
         z-index: 10;
@@ -302,9 +338,12 @@
             height: 250px;
         }
         @include mq(lg){
-            width: 35vw;
-            height: 250px;
-            top: 300px;
+            width: 17vw;
+            height: 450px;
+            top: -1000px;
+        }
+        @include mq(xl){
+            top: -1200px;
         }
 
         & img {
