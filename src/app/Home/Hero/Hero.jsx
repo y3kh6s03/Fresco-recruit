@@ -1,17 +1,16 @@
 import { Scroll } from "@/app/components/Scroll/Scroll"
+import { TextAnimation } from "@/app/components/TextAnimation/TextAnimation"
 import Image from "next/image"
 import "src/app/Home/Hero/Hero.scss"
 
 export const Hero = () => {
     return (
         <div className="hero container">
-            <div className="hero__title">
-                <span>
-                  2025 RECRUIT SITE
-                </span>
-                <h1>
-                    ここで働く<br />
-                    あなたが輝く
+
+            <TextAnimation texts={"2025 RECRUIT SITE"} num={1}/>
+
+            <div className="hero__text">
+                <h1 className="hero__text__headline">
                 </h1>
             </div>
             <div className="hero__inner">
@@ -25,6 +24,7 @@ export const Hero = () => {
             <div className="hero__logo">
                 <Image src="/images/logo.png" fill alt="corp-logo"></Image>
             </div>
+
         </div>
     )
 }

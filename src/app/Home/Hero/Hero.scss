@@ -7,7 +7,7 @@
     @extend .mb-xl;
     position: relative;
 
-    &__title {
+    &__text {
         margin: 100px 0;
         position: relative;
 
@@ -30,7 +30,7 @@
             transform: translateX(7%)
         }
 
-        & h1 {
+        &__headline span{
             @extend .font-xl;
             font-weight: bold;
             line-height: 1.2;
@@ -88,17 +88,20 @@
         top: 0;
         right: 0;
 
-        @include mq(sm){
+        @include mq(sm) {
             top: -30px;
         }
-        @include mq(lg){
+
+        @include mq(lg) {
             top: -100px;
         }
-        @include mq(lg){
+
+        @include mq(lg) {
             top: -30px;
             height: 70%;
         }
-        @include mq(xl){
+
+        @include mq(xl) {
             height: 75%;
         }
 
@@ -164,14 +167,14 @@
         top: 0;
         left: 5%;
 
-        @include mq(sm){
+        @include mq(sm) {
             left: auto;
             right: 5%;
             top: -50%;
         }
     }
 
-    &__logo{
+    &__logo {
         width: 70%;
         height: 70%;
         position: absolute;
@@ -180,7 +183,7 @@
         z-index: -10;
         opacity: .2;
 
-        & img{
+        & img {
             height: 60%;
             object-fit: contain;
             object-position: center;
