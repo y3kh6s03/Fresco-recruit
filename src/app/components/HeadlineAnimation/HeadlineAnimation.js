@@ -5,9 +5,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import "src/app/components/TextAnimation/TextAnimation.scss";
+import "src/app/components/HeadlineAnimation/HeadlineAnimation.scss";
 
-export const TextAnimation = ({ texts, num }) => {
+export const HeadlineAnimation = ({ texts, num }) => {
   const animationContainer = useRef(null);
   const textStrings = texts.split("");
 
