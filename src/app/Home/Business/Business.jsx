@@ -1,5 +1,4 @@
 import { Button } from "@/app/components/Button/Button";
-import { TextAnimation } from "@/app/components/TextAnimation/TextAnimation";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +14,6 @@ export const Business = () => {
     return (
         <section className="home__business container">
             <h3 className="section__title">
-                <TextAnimation texts={"BUSINESS"} num={"2"}/>
                 事業について</h3>
             <div className="home__business__inner">
                 <h4 className="home__business__inner__title">
