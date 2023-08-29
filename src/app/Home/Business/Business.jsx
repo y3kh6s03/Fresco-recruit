@@ -1,4 +1,5 @@
 import { Button } from "@/app/components/Button/Button";
+import { ScrollAnimation, ScrollXAnimation } from "@/app/components/ScrollAnimation/ScrollAnimation";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -13,8 +14,11 @@ export const Business = () => {
 
     return (
         <section className="home__business container">
-            <h3 className="section__title">
-                事業について</h3>
+            <ScrollAnimation>
+                <h3 className="section__title">
+                    事業について
+                </h3>
+            </ScrollAnimation>
             <div className="home__business__inner">
                 <h4 className="home__business__inner__title">
                     Lorem ipsum dolor sit amet.
@@ -26,9 +30,12 @@ export const Business = () => {
                     <Button />
                 </Link>
             </div>
+
+            <ScrollXAnimation>
             <div className="home__business__img__container">
                 <Image src="/images/business/deco-img.jpg" fill sizes="100%" alt="business-image"></Image>
             </div>
+            </ScrollXAnimation>
         </section>
     )
 }

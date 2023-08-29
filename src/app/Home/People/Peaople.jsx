@@ -11,15 +11,18 @@ import "src/app/Home/People/People.scss"
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import Link from 'next/link';
+import { ScrollAnimation } from '@/app/components/ScrollAnimation/ScrollAnimation';
 
 
 export const People = ({ peoples }) => {
 
     return (
         <section className="people">
-            <h2 className="section__title">
-                フレスコ・カンパニーの人
-            </h2>
+            <ScrollAnimation>
+                <h2 className="section__title">
+                    フレスコ・カンパニーの人
+                </h2>
+            </ScrollAnimation>
 
             <div className="swiper__container">
                 <Swiper

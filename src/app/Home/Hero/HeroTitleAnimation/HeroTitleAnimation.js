@@ -2,8 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 import "src/app/Home/Hero/HeroTitleAnimation/HeroTitleAnimation.scss";
 
@@ -15,10 +13,11 @@ export const HeroTitleAnimation = ({ texts, num }) => {
   useEffect(() => {
     gsap.to("." + className, {
       y: 0,
-      delay: 1.5,
+      delay: 1,
+      ease: "Expo.easeOut",
       stagger: {
-        amount: 1,
-        from: "end"
+        each: .04,
+        from: "edges"
       }
     });
   }, []);
