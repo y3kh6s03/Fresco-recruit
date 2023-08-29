@@ -1,12 +1,15 @@
+import { ScrollAnimation } from "@/app/components/ScrollAnimation/ScrollAnimation"
 import Link from "next/link"
 import "src/app/Home/Recruit/Recruit.scss"
 
 export const Recruit = () => {
     return (
         <section className="recruit container">
-            <h2 className="section__title">
-                募集要項
-            </h2>
+            <ScrollAnimation>
+                <h2 className="section__title">
+                    募集要項
+                </h2>
+            </ScrollAnimation>
             <Link className="recruit__new" href="/recruit#new">
                 <div className="recruit__new__content">
                     <h3>

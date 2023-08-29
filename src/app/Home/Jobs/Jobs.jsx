@@ -1,5 +1,6 @@
 
 import { Button } from "@/app/components/Button/Button";
+import { ScrollAnimation, ScrollXAnimation } from "@/app/components/ScrollAnimation/ScrollAnimation";
 import Image from "next/image";
 import Link from "next/link";
 import "src/app/Home/Jobs/Jobs.scss";
@@ -21,11 +22,13 @@ export const Jobs = ({ jobs }) => {
 
 
 
-            <h3 className="section__title">仕事について</h3>
+            <ScrollAnimation>
+                <h3 className="section__title">仕事について</h3>
+            </ScrollAnimation>
             <div className="job__container">
                 {jobs.map((job) => {
                     return (
-                        <>
+                        // <ScrollXAnimation>
                             <Link href={job.name} key={job.num} className="job__card">
                                 <span className="job__card__num">
                                     {job.num}
@@ -43,10 +46,11 @@ export const Jobs = ({ jobs }) => {
                                     <Image src={job.image} fill sizes="100%" alt="job-image"></Image>
                                 </div>
                             </Link>
-                        </>
+                        // </ScrollXAnimation>
                     )
                 })}
             </div>
+
             <div className="job__img__left">
                 <Image
                     src="/images/home/salad.png"
