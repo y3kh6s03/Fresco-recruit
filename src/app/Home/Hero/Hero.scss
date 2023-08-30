@@ -1,7 +1,7 @@
 @use "src/app/styles/_common.scss" as *;
 @use "src/app/styles/_mq.scss" as *;
 
-.hero {
+.home__hero {
     width: 100vw;
     z-index: -1;
     @extend .mb-xl;
