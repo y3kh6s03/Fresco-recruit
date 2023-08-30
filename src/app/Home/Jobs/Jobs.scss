@@ -29,13 +29,10 @@
         left: 0;
         z-index: -99;
 
-        @include mq(md) {
-            height: 150%;
-        }
-
         @include mq(lg) {
-            height: 170%;
-            width: 70vw;
+            top: -180px;
+            height: 180%;
+            width: 65vw;
         }
 
         @include mq(xl) {
@@ -128,15 +125,7 @@
 
     }
 
-
-
-
-
-
-
     & .job__container {
-        margin-left: 12%;
-
         @include mq(md) {
             display: flex;
             flex-wrap: wrap;
@@ -145,25 +134,36 @@
 
         @include mq(xl) {
             width: 70vw;
-            margin-left: 0;
+            margin-right: calc(50% - 50vw);
         }
 
         & .scroll__X__container {
             width: 85vw;
-            height: 150px;
+            height: 140px;
+            margin-left: 12%;
             overflow: hidden;
 
-            @include mq(md) {
-                width: 50%;
-                height: 150px;
-            }
 
             @include mq(md) {
+                margin-left: 0;
+                width: 50%;
+                height: 200px;
+            }
+
+            @include mq(lg) {
                 height: 250px;
+            }
+
+            @include mq(xl) {
+                height: 300px;
             }
 
             &:nth-of-type(1) {
                 border-radius: 20px 0 0 0;
+
+                @include mq(xl) {
+                    border-radius: 20px 0 0 0;
+                }
             }
 
             &:nth-of-type(2) {
@@ -173,8 +173,9 @@
                     border-radius: 0 20px 0 0;
                 }
             }
+
             &:nth-of-type(3) {
-                border-radius: 0 0 0 0;
+                border-radius: 0 0 0 0px;
 
                 @include mq(md) {
                     border-radius: 0 0 0 20px;
@@ -185,13 +186,14 @@
                 border-radius: 0 0 0 20px;
 
                 @include mq(md) {
-                    border-radius: 0 0 0 0;
+                    border-radius: 0 0 0 0px;
                 }
 
                 @include mq(xl) {
                     border-radius: 0 0 20px 0;
                 }
             }
+
         }
 
     }
@@ -203,40 +205,6 @@
         display: flex;
         gap: 20px;
         overflow: hidden;
-
-        @include mq(md) {
-            width: 100%;
-        }
-
-        @include mq(lg) {
-            height: 250px;
-        }
-
-        @include mq(xl) {
-            height: 300px;
-        }
-
-
-
-        &:nth-of-type(3) {
-            border-radius: 0 0 0 0px;
-
-            @include mq(md) {
-                border-radius: 0 0 0 20px;
-            }
-        }
-
-        &:nth-of-type(4) {
-            border-radius: 0 0 0 20px;
-
-            @include mq(md) {
-                border-radius: 0 0 0 0px;
-            }
-
-            @include mq(xl) {
-                border-radius: 0 0 20px 0;
-            }
-        }
 
         &::before {
             content: "";
@@ -256,7 +224,7 @@
             @extend .font-xxl;
             line-height: 1;
             color: white;
-            opacity: .3;
+            opacity: .35;
             padding-top: 10px;
             position: relative;
             margin: 0 0 0 30px
@@ -266,8 +234,13 @@
             z-index: 10;
             padding-top: 10px;
 
+            @include mq(md){
+                padding-top: 40px
+            }
+
             & span {
                 @extend .font-sm;
+
                 color: white;
             }
 
@@ -277,20 +250,16 @@
                 margin: 0;
             }
 
-            @include mq(md){
-                padding-top: 30px;
-            }
-
-            @include mq(lg){
-                padding-top: 40px;
-            }
-
         }
 
         & .button__container {
             top: 65%;
-            right: 50px;
+            right: -30px;
             transform: scale(.6);
+
+            @include mq(lg) {
+                right: 50px;
+            }
         }
 
         &__image {
@@ -325,9 +294,9 @@
         }
 
         @include mq(md) {
-            max-width: 250px;
-            max-height: 250px;
-            bottom: -65%;
+            max-width: 270px;
+            max-height: 270px;
+            bottom: -70%;
             left: 5%;
         }
 
@@ -368,7 +337,7 @@
 
         @include mq(md) {
             bottom: -40%;
-            left: 45%;
+            left: 48%;
         }
 
         @include mq(lg) {
