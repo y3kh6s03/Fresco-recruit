@@ -60,12 +60,9 @@ container
 
 .container {
     width: 100vw;
+    max-width: 1440px;
     position: relative;
     padding: 0 5%;
-
-    @include mq(lg) {
-        max-width: 1920px;
-    }
 }
 
 .content-container {
