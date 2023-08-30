@@ -36,7 +36,6 @@ export const Jobs = ({ jobItems }) => {
                                         </div>
                                     </ScrollXAnimation>
                                     <ScrollXAnimation>
-
                                         <div className="jobs__text2">
                                             <h3 className="jobs__text2__headline">
                                                 {jobItem.headLine2}

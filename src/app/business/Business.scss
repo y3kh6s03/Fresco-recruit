@@ -212,6 +212,7 @@
         width: 30vw;
         height: 220px;
         top: 10px;
+
         right: auto;
         left: -10px;
 
@@ -261,7 +262,6 @@
     & .business__subimage__container {
         top: 500px;
         right: 0;
-
 
         &::before{
             content: "";
@@ -329,6 +329,7 @@
         width: 50vw;
         height: 120px;
         top: -50px;
+
         right: auto;
         left: 0;
         z-index: 10;
