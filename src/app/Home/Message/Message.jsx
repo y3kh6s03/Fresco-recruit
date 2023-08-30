@@ -12,7 +12,7 @@ export const Message = () => {
             </div>
             <ScrollAnimation>
                 <h3 className="section__title">
-                    ともに働く仲間として
+                    Message
                 </h3>
             </ScrollAnimation>
             <ScrollAnimation>
