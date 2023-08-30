@@ -7,6 +7,7 @@ import Lenis from "@studio-freight/lenis"
 
 
 import "src/app/business/Business.scss"
+import { ScrollAnimation, ScrollXAnimation } from "@/app/components/ScrollAnimation/ScrollAnimation";
 
 
 
@@ -14,10 +15,6 @@ export const Business = ({ contentItems }) => {
 
     useEffect(() => {
         const lenis = new Lenis()
-
-        lenis.on('scroll', (e) => {
-            console.log(e)
-        })
 
         function raf(time) {
             lenis.raf(time)
@@ -34,7 +31,7 @@ export const Business = ({ contentItems }) => {
         offset: ["start end", "end start"]
     })
     const y1 = useTransform(scrollYProgress, [0, 1], [0, 600])
-    const y2 = useTransform(scrollYProgress, [0, 1], [0, 1800])
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, 700])
 
     return (
         <div ref={container} className="business__wrapper">
@@ -42,11 +39,13 @@ export const Business = ({ contentItems }) => {
                 contentItems.map((contentItem) => {
                     return (
                         <section key={contentItem.title} className={`business container ${contentItem.title.toLowerCase()}`} id={contentItem.title.toLowerCase()}>
-                            <div className="business__title">
-                                <h2>{contentItem.title}
-                                    <span>{contentItem.jaTitle}</span>
-                                </h2>
-                            </div>
+                            <ScrollAnimation>
+                                <div className="business__title">
+                                    <h2>{contentItem.title}
+                                        <span>{contentItem.jaTitle}</span>
+                                    </h2>
+                                </div>
+                            </ScrollAnimation>
                             <motion.div
                                 style={{ y: y1 }}
                                 className="business__image__container">
@@ -58,12 +57,17 @@ export const Business = ({ contentItems }) => {
                                 <Image src={contentItem.image2} fill sizes="100%" alt="business-image"></Image>
                             </motion.div>
                             <div className="business__text">
-                                <h4 className="business__text__headline">
-                                    {contentItem.headline}
-                                </h4>
-                                <p className="business__text__description">
-                                    {contentItem.description}
-                                </p>
+                                <ScrollXAnimation>
+                                    <h4 className="business__text__headline">
+                                        {contentItem.headline}
+                                    </h4>
+                                </ScrollXAnimation>
+                                <ScrollXAnimation>
+
+                                    <p className="business__text__description">
+                                        {contentItem.description}
+                                    </p>
+                                </ScrollXAnimation>
                             </div>
                         </section>
                     )
