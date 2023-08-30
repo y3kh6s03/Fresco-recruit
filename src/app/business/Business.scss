@@ -133,10 +133,21 @@
 /////////////////////////////////////
 
 .kyushoku {
+    & .business__image__container {
+        top: -20px;
+    }
+
     & .business__subimage__container {
-        top: -5%;
+        top: 23%;
         right: 0;
         z-index: 1;
+
+        @include mq(sm){
+            top: 28%;
+        }
+        @include mq(md){
+            top: 32%;
+        }
 
         &::before {
             content: "";
@@ -151,10 +162,7 @@
         }
     }
 
-    & .business__image__container {
-        top: -50px;
-        @extend .mb-lg;
-    }
+
 }
 
 /////////////////////////////////////
@@ -184,7 +192,7 @@
         height: 200px;
         margin-left: auto;
         margin-right: calc(50% - 50vw);
-        top: -200px;
+        top: -60px;
 
         @include mq(lg){
             width: 60vw;
@@ -192,7 +200,7 @@
         }
         @include mq(xl){
             position: relative;
-            top: -200px;
+            // top: -200px;
         }
 
         & img {
@@ -203,17 +211,14 @@
     & .business__subimage__container {
         width: 30vw;
         height: 220px;
-        top: -400px;
+        top: 10px;
         right: auto;
         left: -10px;
 
         @include mq(lg){
             width: 30vw;
             height: 400px;
-            top: 0px;
-        }
-        @include mq(xl){
-            top: -200px;
+            top: 100px;
         }
 
         & img {
@@ -246,21 +251,17 @@
 
     & .business__image__container {
         @extend .mb-md;
-        top: -350px;
+        top: -200px;
 
         @include mq(xl){
             position: relative;
-            top: -400px;
         }
     }
 
     & .business__subimage__container {
-        top: -600px;
+        top: 500px;
         right: 0;
 
-        @include mq(xl){
-            top: -450px;
-        }
 
         &::before{
             content: "";
@@ -305,7 +306,7 @@
         height: 200px;
         margin-left: auto;
         margin-right: calc(50% - 50vw);
-        top: -450px;
+        top: -230px;
 
         @include mq(lg){
             height: 380px;
@@ -313,7 +314,6 @@
         @include mq(xl){
             margin-right: calc(50% - 40vw);
             position: relative;
-            top: -450px;
         }
 
         & img {
@@ -328,7 +328,7 @@
     & .business__subimage__container {
         width: 50vw;
         height: 120px;
-        top: -1000px;
+        top: -50px;
         right: auto;
         left: 0;
         z-index: 10;
@@ -340,10 +340,7 @@
         @include mq(lg){
             width: 17vw;
             height: 450px;
-            top: -1000px;
-        }
-        @include mq(xl){
-            top: -1200px;
+            top: -100px;
         }
 
         & img {

@@ -7,6 +7,7 @@ import Lenis from "@studio-freight/lenis"
 
 
 import "src/app/business/Business.scss"
+import { ScrollXAnimation } from "@/app/components/ScrollAnimation/ScrollAnimation";
 
 
 
@@ -33,8 +34,8 @@ export const Business = ({ contentItems }) => {
         target: container,
         offset: ["start end", "end start"]
     })
-    const y1 = useTransform(scrollYProgress, [0, 1], [0, 600])
-    const y2 = useTransform(scrollYProgress, [0, 1], [0, 1800])
+    const y1 = useTransform(scrollYProgress, [0, 1], [0, 300])
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, 450])
 
     return (
         <div ref={container} className="business__wrapper">
@@ -58,12 +59,16 @@ export const Business = ({ contentItems }) => {
                                 <Image src={contentItem.image2} fill sizes="100%" alt="business-image"></Image>
                             </motion.div>
                             <div className="business__text">
-                                <h4 className="business__text__headline">
-                                    {contentItem.headline}
-                                </h4>
-                                <p className="business__text__description">
-                                    {contentItem.description}
-                                </p>
+                                <ScrollXAnimation>
+                                    <h4 className="business__text__headline">
+                                        {contentItem.headline}
+                                    </h4>
+                                </ScrollXAnimation>
+                                <ScrollXAnimation>
+                                    <p className="business__text__description">
+                                        {contentItem.description}
+                                    </p>
+                                </ScrollXAnimation>
                             </div>
                         </section>
                     )
