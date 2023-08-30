@@ -11,10 +11,9 @@ export const Message = () => {
                 <Image src="/images/home/bleu-plate.png" width={250} height={250} alt="message__image"></Image>
             </div>
             <ScrollAnimation>
-                <h2 className="section__title">
-                    Message
-                    <span>ともに働く人へ</span>
-                </h2>
+                <h3 className="section__title">
+                    ともに働く仲間として
+                </h3>
             </ScrollAnimation>
             <ScrollAnimation>
                 <div className="message__inner">
