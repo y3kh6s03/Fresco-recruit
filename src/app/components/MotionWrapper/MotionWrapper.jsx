@@ -1,6 +1,6 @@
 "use client"
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { usePathname } from "next/navigation"
 import { useEffect } from 'react';
 
@@ -29,7 +29,6 @@ export const MotionWrapper = ({ children }) => {
     console.log(childrenPathName)
 
     return (
-        <AnimatePresence initial={false} mode="wait">
             <motion.div
                 key={pathName}
                 initial={{ opacity: 0, y: -500 }}
@@ -37,15 +36,14 @@ export const MotionWrapper = ({ children }) => {
                 transition={{ duration: 1, delay: .5,ease: "easeInOut", type: "spring" }}
             >
                 {children}
-                {/* <motion.div
+                <motion.div
                     key={`children1${pathName}`}
                     className="slide-in"
                     initial={{ scaleY: 0 }}
                     animate={{ scaleY: 0 }}
                     exit={{ scaleY: 1 }}
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}>
-                </motion.div> */}
+                </motion.div>
             </motion.div>
-        </AnimatePresence>
     )
 }
