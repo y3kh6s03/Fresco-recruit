@@ -37,14 +37,14 @@ export const MotionWrapper = ({ children }) => {
                 transition={{ duration: 1, delay: .5,ease: "easeInOut", type: "spring" }}
             >
                 {children}
-                <motion.div
+                {/* <motion.div
                     key={`children1${pathName}`}
                     className="slide-in"
                     initial={{ scaleY: 0 }}
                     animate={{ scaleY: 0 }}
                     exit={{ scaleY: 1 }}
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}>
-                </motion.div>
+                </motion.div> */}
             </motion.div>
         </AnimatePresence>
     )
