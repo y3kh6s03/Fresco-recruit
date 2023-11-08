@@ -11,8 +11,8 @@ export const Hero = () => {
             <div className="home__hero__text">
                 <HeroTitleAnimation texts={"2025 RECRUIT SITE"} num={1} />
                 <h1 className="home__hero__text__headline">
-                    <HeroTitleAnimation texts={"ここで働く。"} num={2} />
-                    <HeroTitleAnimation texts={"あなたが輝く。"} num={3} />
+                    <HeroTitleAnimation texts={"食で"} num={2} />
+                    <HeroTitleAnimation texts={"未来を変えていく。"} num={3} />
                 </h1>
             </div>
             <div className="home__hero__inner">

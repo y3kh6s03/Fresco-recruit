@@ -10,7 +10,7 @@ export const Recruit = () => {
                     募集要項
                 </h2>
             </ScrollAnimation>
-            <Link className="recruit__new" href="/recruit#new">
+            <Link className="recruit__new" href="/recruit#student">
                 <div className="recruit__new__content">
                     <h3>
                         New graduate
@@ -24,7 +24,7 @@ export const Recruit = () => {
                     <span></span>
                 </div>
             </Link>
-            <Link className="recruit__new" href="/recruit">
+            <Link className="recruit__new" href="/recruit#mid">
                 <div className="recruit__new__content">
                     <h3>
                         Mid-career

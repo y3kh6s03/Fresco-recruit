@@ -1,9 +1,9 @@
 import "src/app/recruit/Recruit.scss";
 
-export const Recruit = () => {
+export const Mid = () => {
     return (
-        <section className="recruit"  id="student">
-            <h2 className="recruit__title">
+        <section className="recruit"  id="mid">
+            <h2 className="recruit__title" id="new">
                 募集要項
             </h2>
 

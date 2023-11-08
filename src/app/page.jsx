@@ -7,6 +7,7 @@ import { Recruit } from '@/app/Home/Recruit/Recruit'
 
 import peoples from '@/app/Home/People/People.json'
 import jobs from '@/app/Home/Jobs/Jobs.json'
+import { About } from '@/app/Home/About/About'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <main>
       <Hero></Hero>
+      <About></About>
       <Message></Message>
       <Business></Business>
       <Jobs jobs={jobs}></Jobs>
