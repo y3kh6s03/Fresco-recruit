@@ -19,13 +19,17 @@ export const Message = () => {
                 <div className="message__inner">
 
                     <h3 className="message__inner__title">
-                        MEAL FOR SMILE.
+                        Meal for Smile.
                         <span>
-                            わたしたちの食事で笑顔に
+                            食で未来を変えていく。
                         </span>
                     </h3>
                     <p className="message__inner__content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, minus veniam facilis nulla aspernatur odit dolor quam, libero nam officia doloribus error ex veritatis maiores, magnam voluptate velit tempore corporis.
+                        生まれてからこの世を去るまで、誰もが行う食事。<br />
+                        しかし、食の可能性は私たちの体を生かすことだけにとどまりません。<br />
+                        たくさんの人の健康を、環境保全を、生産者のみなさまの課題解決を、
+                        あらゆることを食のチカラで実現したい。<br />
+                        食のチカラを信じる仲間とともに、新たな未来を一緒に作りませんか?
                     </p>
                 </div>
             </ScrollAnimation>

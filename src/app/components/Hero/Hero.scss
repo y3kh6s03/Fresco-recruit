@@ -86,7 +86,7 @@
         }
 
         & p {
-            @extend .font-md;
+            @extend .font-sm;
             line-height: 1.6;
 
             @include mq(xl) {

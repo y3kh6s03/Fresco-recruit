@@ -2,8 +2,8 @@ export const businessHero = {
     title: "Business",
     jaTitle: "フレスコ・カンパニーの事業",
     image: "/images/business/working.jpg",
-    headline: "事業展開の展望ヘッドライン",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellendus ea cum nesciunt voluptatum impedit laborum harum voluptate dolor placeat est recusandae earum praesentium, voluptates rem nemo sint? Id, explicabo."
+    headline: "食べるから、人の笑顔を",
+    description: "フレスコカンパニーは、北信地域を中心に施設給食事業、ケータリング事業などを行うフードビジネスカンパニーです。みなさまの笑顔をつくるあらゆる食体験を提供しています。私たちは、”食べる”を通じて今を生きる私たちや未来の子供たちに笑顔あふれる人生を提供しています。"
 }
 export const jobsHero = {
     title: "Jobs",
@@ -21,10 +21,17 @@ export const peopleHero = {
 }
 export const recruitHero = {
     title: "Recruit",
-    jaTitle: "求人情報",
-    image: "/images/student/student_hero.jpg",
-    headline: "温かな心と専門知識を持つプロへ",
-    description: "従業員の健康と幸福感を大切にしています。福祉施設での勤務における重要な支援体制を整え、仕事とプライベートの両立をサポートします。また、研修制度やキャリアパスの機会も豊富に提供し、あなたのスキルアップと成長を応援します。"
+    jaTitle: "新卒採用情報",
+    image: "/images/recruit/student_hero.jpg",
+    headline: "食で未来に挑戦する。その一歩を踏み出そう。",
+    description: "食を通じて笑顔を増やす、それが私たちの使命です。だから、これまでの方法にとらわれず、常に新たな一歩を踏み出す勇気が必要。大切なのはスキルだけではありません。笑顔のために、考え抜き、挑戦し続け、熱狂できる。がむしゃらに突き進むなかで、共に成長し続ける。もっといい未来を一緒に作りませんか?"
+}
+export const midHero = {
+    title: "Mid-career",
+    jaTitle: "中途採用情報",
+    image: "/images/recruit/mid-hero.jpg",
+    headline: "そのスキルを、笑顔を咲かせるために。",
+    description: "今までのキャリアの中で培ってきた知識やスキルは、あなたにとって大きな財産。目指す世界を実現するために、そのスキルを存分に発揮してみませんか。私たちは、「人生に最高の食体験を」というミッションを実現するために、プロフェッショナルが集まるチームを目指しています。給食事業経験者、飲食経験者はもちろん異業種からの挑戦も歓迎します。"
 }
 export const contactHero = {
     title: "Contact",
