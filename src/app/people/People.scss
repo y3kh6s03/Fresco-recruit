@@ -5,18 +5,19 @@
     @extend .mb-xl;
 
     &__image__container {
-        width: 100vw;
-        height: 300px;
+        width: 80vw;
+        height: 450px;
         position: relative;
         margin-left: calc(50% - 30vw);
 
-        @include mq(lg){
-            width: 70vw;
+        @include mq(lg) {
+            width: 50vw;
             height: 400px;
             margin-left: calc(50% - 20vw);
         }
-        @include mq(xl){
-            width: 80vw;
+
+        @include mq(xl) {
+            width: 40vw;
             height: 450px;
             margin-left: calc(50% - 20vw);
         }
@@ -24,7 +25,11 @@
         & img {
             border-radius: 20px 0 0 20px;
             object-fit: cover;
-            object-position: center;
+            object-position: top;
+
+            @include mq(lg) {
+                border-radius: 20px 0 20px 0;
+            }
         }
     }
 
@@ -36,10 +41,11 @@
         z-index: 10;
         @extend .mb-md;
 
-        @include mq(lg){
+        @include mq(lg) {
             width: 45vw;
         }
-        @include mq(lg){
+
+        @include mq(lg) {
             width: 35vw;
         }
 
@@ -66,34 +72,55 @@
 
         & p {
             color: white;
+            white-space: pre;
+
+            &:nth-of-type(2){
+                @extend .font-lg;
+            }
         }
     }
 
     &__contents {
-        @include mq(lg){
+        @include mq(lg) {
             width: 75vw;
         }
-        @include mq(xl){
+
+        @include mq(xl) {
             width: 50vw;
             margin-left: 45%
         }
 
-        &__question {
-            @extend .font-sm;
-            line-height: 1.6;
+        // &__question {
+        //     @extend .font-sm;
+        //     line-height: 1.6;
 
-            @include mq(xl){
-                font-size: 20px;
-            }
-        }
+        //     @include mq(xl) {
+        //         font-size: 20px;
+        //     }
+        // }
 
         &__answer {
 
             &:nth-of-type(1) {
                 @extend .mb-md;
                 line-height: 1.6;
+                white-space: pre-line;
+
             }
         }
     }
-
+    &:nth-of-type(3){
+        & .people__image__container{
+            & img{
+                object-position: center;
+            }
+        }
+    }
+    &:nth-of-type(4){
+        & .people__image__container{
+            & img{
+                object-position: top;
+            }
+        }
+    }
 }

@@ -27,7 +27,6 @@ export const People = ({ peoples }) => {
             <div className="swiper__container">
                 <Swiper
                     modules={[Autoplay]}
-                    // slidesPerGroup={1}
                     autoplay={{
                         delay: 0,
                         disableOnInteraction: false,
@@ -69,9 +68,7 @@ export const People = ({ peoples }) => {
                                                 <h3>
                                                     {people.headline}
                                                 </h3>
-                                                <p>
-                                                    担当部署 : {people.position} <br />
-                                                    担当業務 : {people.job}
+                                                <p>{people.department} <br />{people.career}
                                                 </p>
                                             </div>
                                         </Link>

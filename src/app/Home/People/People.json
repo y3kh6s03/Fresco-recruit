@@ -1,16 +1,13 @@
 [
     {
         "num": "01",
-        "href": "/people#leader",
-        "headline": "ヘッドラインメッセージ",
-        "position": "担当部署",
-        "job": "担当業務",
-        "image": "/images/person/person1.jpg"
+        "position": "フレスコカンパニー 管理本部",
+        "job": "統括本部長 小林 賢一",
+        "image": "/images/person/kobayashi.jpg"
     },
     {
         "num": "02",
         "href": "/people#dietician",
-        "headline": "ヘッドラインメッセージ",
         "position": "担当部署",
         "job": "担当業務",
         "image": "/images/person/person2.jpg"
@@ -18,7 +15,6 @@
     {
         "num": "03",
         "href": "/people#chef",
-        "headline": "ヘッドラインメッセージ",
         "position": "担当部署",
         "job": "担当業務",
         "image": "/images/person/person3.jpg"
@@ -26,7 +22,6 @@
     {
         "num": "04",
         "href": "/people#headquaters",
-        "headline": "ヘッドラインメッセージ",
         "position": "担当部署",
         "job": "担当業務",
         "image": "/images/person/person4.jpg"

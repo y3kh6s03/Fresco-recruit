@@ -19,22 +19,24 @@ export const People = ({ peopleItems }) => {
                                         {peopleItem.headline}
                                     </h3>
                                     <p>{peopleItem.department}</p>
+                                    <p>{peopleItem.name}</p>
                                     <p>{peopleItem.since}</p>
+                                    <p>{peopleItem.career}</p>
                                 </div>
                             </ScrollAnimation>
                             <div className="people__contents">
                                 <ScrollXAnimation>
-                                <h4 className="people__contents__question">
+                                {/* <h4 className="people__contents__question">
                                     {peopleItem.interview1}
-                                </h4>
+                                </h4> */}
                                 <p className="people__contents__answer">
                                     {peopleItem.answer1}
                                 </p>
                                 </ScrollXAnimation>
                                 <ScrollXAnimation>
-                                <h4 className="people__contents__question">
+                                {/* <h4 className="people__contents__question">
                                     {peopleItem.interview2}
-                                </h4>
+                                </h4> */}
                                 <p className="people__contents__answer">
                                     {peopleItem.answer2}
                                 </p>

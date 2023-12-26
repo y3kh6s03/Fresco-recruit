@@ -6,7 +6,8 @@ $breakpoints: (
     // コンパクトノートPC
     'lg': '(min-width: 960px)',
     // デスクトップPC
-    'xl': '(min-width: 1280px)'
+    'xl': '(min-width: 1280px)',
+    'xxl': '(min-width: 1500px)'
 );
 
 @mixin mq($breakpoint: md) {

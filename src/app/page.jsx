@@ -5,7 +5,8 @@ import { Jobs } from '@/app/Home/Jobs/Jobs'
 import { People } from '@/app/Home/People/Peaople'
 import { Recruit } from '@/app/Home/Recruit/Recruit'
 
-import peoples from '@/app/Home/People/People.json'
+import peoples from '@/app/people/People.json'
+// import peoples from '@/app/Home/People/People.json'
 import jobs from '@/app/Home/Jobs/Jobs.json'
 import { About } from '@/app/Home/About/About'
 
