@@ -1,6 +1,6 @@
 
 
-// import { MotionWrapper } from '@/app/components/MotionWrapper/MotionWrapper'
+import { MotionWrapper } from '@/app/components/MotionWrapper/MotionWrapper'
 
 import { Footer } from '@/app/components/Footer/Footer';
 import { NavBar } from './components/Navbar/Navbar';
