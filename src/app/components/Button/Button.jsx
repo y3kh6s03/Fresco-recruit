@@ -8,9 +8,9 @@ export const Button = ({ href }) => {
     return (
         <div className="button__container">
             <div className="button">
-                <button className="button__link" href={href}>
+                <Link className="button__link" href={href}>
                     Read More
-                </button>
+                </Link>
                 <span></span>
             </div>
         </div>

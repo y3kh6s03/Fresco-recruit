@@ -40,9 +40,9 @@ export default function RootLayout({ children }) {
       <body>
         <div className="wrapper">
           <NavBar navbarItems={navbarItems}></NavBar>
-          {/* <MotionWrapper> */}
+          <MotionWrapper>
             {children}
-          {/* </MotionWrapper> */}
+          </MotionWrapper>
           <Footer footerItems={footerItems}></Footer>
         </div>
       </body>
