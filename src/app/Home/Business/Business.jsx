@@ -23,9 +23,9 @@ export const Business = () => {
                 <div className="home__business__inner__content">
                     フレスコカンパニーは、北信地域を中心に施設給食事業、ケータリング事業などを行うフードビジネスカンパニーです。みなさまの笑顔をつくるあらゆる食体験を提供しています。私たちは、”食べる”を通じて今を生きる私たちや未来の子供たちに笑顔あふれる人生を提供しています。
                 </div>
-                <Link href="/business">
-                    <Button />
-                </Link>
+                {/* <Link href="/business"> */}
+                <Button href={"/business"} />
+                {/* </Link> */}
             </div>
 
             <ScrollXAnimation>

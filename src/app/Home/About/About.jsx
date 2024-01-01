@@ -1,8 +1,7 @@
 import "/src/app/Home/About/About.scss"
 
-import { Button } from "@/app/components/Button/Button"
-import { ScrollAnimation, ScrollXAnimation } from "@/app/components/ScrollAnimation/ScrollAnimation"
-import Image from "next/image"
+import { ScrollAnimation } from "@/app/components/ScrollAnimation/ScrollAnimation"
+
 
 
 export const About = () => {

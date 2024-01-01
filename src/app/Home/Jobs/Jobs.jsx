@@ -29,7 +29,7 @@ export const Jobs = ({ jobs }) => {
                 {jobs.map((job) => {
                     return (
                         <ScrollXAnimation  key={job.num} >
-                            <Link href={job.name}className="job__card">
+                            <div className="job__card">
                                 <span className="job__card__num">
                                     {job.num}
                                 </span>
@@ -41,11 +41,11 @@ export const Jobs = ({ jobs }) => {
                                         {job.enType}
                                     </h3>
                                 </div>
-                                <Button></Button>
+                                <Button href={job.name}/>
                                 <div className="job__card__image">
                                     <Image src={job.image} fill sizes="100%" alt="job-image"></Image>
                                 </div>
-                            </Link>
+                            </div>
                         </ScrollXAnimation>
                     )
                 })}
