@@ -42,7 +42,7 @@
     &__card {
         width: 65vw;
         height: 350px;
-        margin-top: 70px;
+        margin-top: 50px;
         position: relative;
 
         @include mq(md) {
@@ -56,7 +56,8 @@
         }
 
         @include mq(xl) {
-            height: 600px;
+            margin-top: 150px;
+            height: 650px;
         }
 
         &__image{
@@ -81,10 +82,15 @@
                 color: $cOrange;
                 top: -15%;
                 left: 5%;
+
+                @include mq(xl){
+                    top: -25%;
+                }
             }
         }
 
         &__contents {
+            width: 90%;
             position: absolute;
             bottom: 0;
             left: 5%;

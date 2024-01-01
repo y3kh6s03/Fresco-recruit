@@ -34,7 +34,7 @@
     }
 
     &__headline__inner {
-        width: 60vw;
+        width: 70vw;
         padding: 3% 5% 5%;
         margin-top: -10%;
         position: relative;
@@ -68,14 +68,23 @@
         & h3 {
             color: white;
             @extend .font-md;
+            width: 90%;
         }
 
         & p {
+            width: 90%;
             color: white;
-            white-space: pre;
+            white-space: pre-line;
+            margin: 0;
 
             &:nth-of-type(2){
                 @extend .font-lg;
+                @extend .mb-sm;
+            }
+
+            &:last-child{
+                @extend .mb-md;
+
             }
         }
     }
