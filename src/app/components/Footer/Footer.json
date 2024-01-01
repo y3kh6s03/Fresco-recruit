@@ -51,20 +51,28 @@
         "mainLink": "/people",
         "types": [
             {
-                "name": "01",
-                "url": "/people#leader"
+                "name": "統括本部長",
+                "url": "/people#kobayashi"
             },
             {
-                "name": "02",
-                "url": "/people#chef"
+                "name": "栄養部門長",
+                "url": "/people#shiraishi"
             },
             {
-                "name": "03",
-                "url": "/people#dietician"
+                "name": "事業所責任者",
+                "url": "/people#tokutake"
             },
             {
-                "name": "04",
-                "url": "/people#headquaters"
+                "name": "調理師",
+                "url": "/people#yokoyama"
+            },
+            {
+                "name": "栄養士",
+                "url": "/people#sakaguti"
+            },
+            {
+                "name": "調理師",
+                "url": "/people#sunohara"
             }
         ]
     },
@@ -79,7 +87,7 @@
             },
             {
                 "name": "中途採用",
-                "url": "/recruit"
+                "url": "/recruit#mid"
             }
         ]
     }

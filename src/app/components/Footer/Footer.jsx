@@ -40,9 +40,9 @@ export const Footer = ({ footerItems }) => {
                                         </div>
                                     </Link>
                                     {
-                                        footerItem.types.map((type) => {
+                                        footerItem.types.map((type, index) => {
                                             return (
-                                                <ul key={type.name}
+                                                <ul key={index}
                                                     className={selected === i ? "open" : ""}>
                                                     <li>
                                                         <Link href={type.url}>{type.name}</Link>

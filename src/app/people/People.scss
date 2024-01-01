@@ -6,19 +6,25 @@
 
     &__image__container {
         width: 80vw;
-        height: 450px;
+        max-width: 400px;
+        height: 350px;
         position: relative;
         margin-left: calc(50% - 30vw);
 
+        @include mq(md) {
+            max-width: 550px;
+            height: 450px;
+            margin-left: calc(50% - 20vw);
+        }
         @include mq(lg) {
-            width: 50vw;
-            height: 400px;
+            max-width: 600px;
+            height: 550px;
             margin-left: calc(50% - 20vw);
         }
 
         @include mq(xl) {
-            width: 40vw;
-            height: 450px;
+            width: 650px;
+            height: 600px;
             margin-left: calc(50% - 20vw);
         }
 
@@ -34,19 +40,23 @@
     }
 
     &__headline__inner {
-        width: 70vw;
+        width: 65vw;
         padding: 3% 5% 5%;
         margin-top: -10%;
         position: relative;
         z-index: 10;
         @extend .mb-md;
 
-        @include mq(lg) {
-            width: 45vw;
+        @include mq(md) {
+            max-width: 380px;
         }
 
         @include mq(lg) {
-            width: 35vw;
+            max-width: 450px;
+        }
+
+        @include mq(xl) {
+            max-width: 450px;
         }
 
 
@@ -67,24 +77,21 @@
 
         & h3 {
             color: white;
-            @extend .font-md;
-            width: 90%;
+            @extend .font-sm;
         }
 
         & p {
-            width: 90%;
             color: white;
             white-space: pre-line;
             margin: 0;
 
             &:nth-of-type(2){
                 @extend .font-lg;
-                @extend .mb-sm;
+                margin-bottom: 0;
             }
 
             &:last-child{
-                @extend .mb-md;
-
+                @extend .mb-sm;
             }
         }
     }
