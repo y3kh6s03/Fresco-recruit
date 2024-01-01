@@ -1,6 +1,6 @@
 
 
-import { MotionWrapper } from '@/app/components/MotionWrapper/MotionWrapper'
+// import { MotionWrapper } from '@/app/components/MotionWrapper/MotionWrapper'
 
 import { Footer } from '@/app/components/Footer/Footer';
 import { NavBar } from './components/Navbar/Navbar';
@@ -40,9 +40,9 @@ export default function RootLayout({ children }) {
       <body>
         <div className="wrapper">
           <NavBar navbarItems={navbarItems}></NavBar>
-          <MotionWrapper>
+          {/* <MotionWrapper> */}
             {children}
-          </MotionWrapper>
+          {/* </MotionWrapper> */}
           <Footer footerItems={footerItems}></Footer>
         </div>
       </body>
